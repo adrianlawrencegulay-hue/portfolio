@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Lawrence Gulay - Android Developer & IT Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            letter-spacing: -0.025em;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2b6cb0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #2b6cb0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 8rem 0 4rem;
+            margin-top: 80px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #2b6cb0;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #2b6cb0;
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #2b6cb0;
+        }
+
+        .btn-primary:hover {
+            background: #2c5282;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #2b6cb0;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #2b6cb0;
+        }
+
+        .btn-secondary:hover {
+            background: #2b6cb0;
+            color: white;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .profile-placeholder {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-alt {
+            background: #f7fafc;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #718096;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #718096;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            background: #edf2f7;
+            color: #2d3748;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #2c5282;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h3 {
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+        }
+
+        .skill-name {
+            font-weight: 500;
+            color: #2d3748;
+        }
+
+        .skill-level {
+            width: 100px;
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #2b6cb0, #3182ce);
+            border-radius: 3px;
+            transition: width 1s ease;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+        }
+
+        .experience-item {
+            position: relative;
+            padding-left: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: #2b6cb0;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #e2e8f0;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-header {
+            margin-bottom: 1rem;
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.25rem;
+        }
+
+        .company {
+            color: #2b6cb0;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .duration {
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
+
+        .responsibilities {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .responsibilities li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .responsibilities li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2b6cb0;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: #edf2f7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #4a5568;
+        }
+
+        /* Education Section */
+        .education-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .education-icon {
+            width: 80px;
+            height: 80px;
+            background: #2b6cb0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #2d3748;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-top: 1px solid #e2e8f0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-placeholder {
+                width: 250px;
+                height: 250px;
+                font-size: 3rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-timeline::before {
+                left: 15px;
+            }
+
+            .experience-item {
+                padding-left: 3rem;
+            }
+
+            .experience-item::before {
+                left: 7px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Adrian L. Gulay</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Adrian Lawrence Gulay</h1>
+                        <div class="hero-subtitle">Android Developer & IT Professional</div>
+                        <p class="hero-description">
+                            Experienced software developer specializing in Android app development and comprehensive IT support. 
+                            Passionate about creating efficient mobile solutions and solving complex technical challenges to drive business success.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn-primary">View My Work</a>
+                            <a href="#contact" class="btn-secondary">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-placeholder">
+                            AG
+                            <!-- Replace with your actual photo: -->
+                            <!-- <img src="your-photo.jpg" alt="Adrian Gulay" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    A showcase of my recent Android development work and technical implementations
+                </p>
+                <div class="projects-grid">
+                    <!-- Project 1 - Replace with your actual projects -->
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <!-- Add your project screenshot here -->
+                            <img src="project1-screenshot.jpg" alt="Project Name" style="display: none;">
+                            <div>📱 Project Screenshot</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Kitchen Management App</h3>
+                            <p class="project-description">
+                                A comprehensive Android application for Hero Kitchen Detailers Inc. featuring inventory management, 
+                                task scheduling, and real-time updates with Firebase integration.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Material Design</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View Details</a>
+                                <a href="#" class="project-link">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="project2-screenshot.jpg" alt="Project Name" style="display: none;">
+                            <div>💼 Project Screenshot</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Business Management System</h3>
+                            <p class="project-description">
+                                Enterprise-level mobile application with user authentication, data synchronization, 
+                                and offline capabilities for seamless business operations.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Room Database</span>
+                                <span class="tech-tag">Retrofit</span>
+                                <span class="tech-tag">MVVM</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View Details</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="project3-screenshot.jpg" alt="Project Name" style="display: none;">
+                            <div>🔧 Project Screenshot</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">IT Support Dashboard</h3>
+                            <p class="project-description">
+                                Internal tool developed for New Century Books to streamline IT support tickets, 
+                                hardware inventory tracking, and maintenance scheduling.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">Android Studio</span>
+                                <span class="tech-tag">Custom UI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View Details</a>
+                                <a href="#" class="project-link">Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-subtitle">
+                    Comprehensive skill set spanning mobile development, IT infrastructure, and business solutions
+                </p>
+                <div class="skills-grid">
+                    <div class="skill-category fade-in">
+                        <h3>📱 Mobile Development</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Kotlin</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Android Studio</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Firebase</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Material Design</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 85%;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in">
+                        <h3>🔧 IT Infrastructure</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Hardware Troubleshooting</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 95%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Network Administration</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Windows/Linux Systems</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Remote Support</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">System Diagnostics</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 88%;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in">
+                        <h3>💼 Business Applications</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Microsoft Office Suite</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Google Workspace</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Database Management</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 75%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Technical Documentation</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Project Management</span>
+                            <div class="skill-level"><div class="skill-progress" style="width: 80%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">
+                    A track record of delivering high-quality technical solutions and exceptional client support
+                </p>
+                <div class="experience-timeline">
+                    <div class="experience-item fade-in">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3 class="job-title">Android Developer</h3>
+                                <div class="company">Hero Kitchen Detailers Inc.</div>
+                                <span class="duration">2024 - Present</span>
+                            </div>
+                            <ul class="responsibilities">
+                                <li>Designed and developed scalable Android applications using Java and Kotlin, serving 500+ daily active users</li>
+                                <li>Implemented responsive UI/UX designs following Material Design guidelines, improving user satisfaction by 40%</li>
+                                <li>Integrated Firebase services for real-time data synchronization and user authentication</li>
+                                <li>Conducted comprehensive testing and debugging, reducing app crashes by 85%</li>
+                                <li>Provided technical training and ongoing support to clients, ensuring smooth app adoption</li>
+                                <li>Collaborated with cross-functional teams to deliver projects on time and within budget</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item fade-in">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3 class="job-title">IT Staff / Admin Officer</h3>
+                                <div class="company">New Century Books</div>
+                                <span class="duration">2019 - 2023</span>
+                            </div>
+                            <ul class="responsibilities">
+                                <li>Managed IT infrastructure for 50+ employees, maintaining 99.5% system uptime</li>
+                                <li>Provided comprehensive technical support via phone and remote access, resolving 95% of issues within 24 hours</li>
+                                <li>Configured and maintained network systems, printers, and peripheral devices</li>
+                                <li>Performed hardware troubleshooting and system diagnostics, reducing downtime by 60%</li>
+                                <li>Created technical documentation and user guides to improve team efficiency</li>
+                                <li>Managed software installations and system upgrades across multiple platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-card fade-in">
+                    <div class="education-icon">🎓</div>
+                    <h3>Bachelor of Science in Information Technology</h3>
+                    <p><strong>Cavite State University - Silang Campus</strong></p>
+                    <p class="duration" style="display: inline-block; margin: 1rem 0;">2015 - 2019</p>
+                    <p style="margin-top: 1rem; color: #4a5568; line-height: 1.6;">
+                        Comprehensive education in modern information technology practices, programming methodologies, 
+                        system administration, and software development lifecycle management.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">
+                    Ready to collaborate on your next project or discuss opportunities
+                </p>
+                <div class="contact-grid">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📱</div>
+                        <h3>Phone</h3>
+                        <p>099-1381-7678</p>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>adrianlawrence.gulay@gmail.com</p>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📍</div>
+                        <h3>Location</h3>
+                        <p>Brgy. Malibo Bata<br>Pandi, Bulacan</p>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">💼</div>
+                        <h3>Availability</h3>
+                        <p>Open to new opportunities<br>Remote & On-site work</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: #1a202c; color: white; padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 Adrian Lawrence Gulay. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; color: #718096; font-size: 0.9rem;">
+                Android Developer & IT Professional
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animate skill progress bars when visible
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.skill-progress');
+                    progressBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 100);
+                    });
+                    skillObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-category').forEach(el => {
+            skillObserver.observe(el);
+        });
+
+        // Add typing effect to hero title (optional enhancement)
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect on page load
+        window.addEventListener('load', () => {
+            const heroTitle = document.querySelector('.hero-text h1');
+            const originalText = heroTitle.textContent;
+            // Uncomment the line below to enable typing effect
+            // typeWriter(heroTitle, originalText, 80);
+        });
+
+        // Add project image upload functionality (for future use)
+        function handleProjectImageUpload(projectIndex, file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const projectImages = document.querySelectorAll('.project-image');
+                if (projectImages[projectIndex]) {
+                    projectImages[projectIndex].innerHTML = `<img src="${e.target.result}" alt="Project Screenshot" style="width: 100%; height: 100%; object-fit: cover;">`;
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Add click-to-expand functionality for project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('project-link')) {
+                    card.classList.toggle('expanded');
+                    // Add your expand/collapse logic here
+                }
+            });
+        });
+
+        // Add smooth reveal animation for timeline items
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0)';
+                    }, index * 200);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.experience-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-30px)';
+            item.style.transition = 'all 0.6s ease';
+            timelineObserver.observe(item);
+        });
+    </script>
+</body>
+</html>
