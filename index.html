@@ -3,290 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrian Lawrence Gulay - Android Developer & IT Professional</title>
+    <title>Adrian Lawrence Gulay — Android Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Cursor Follower -->
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Noise overlay -->
+    <div class="noise-overlay"></div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <div class="brand-icon">ALG</div>
-                <div class="brand-text">
-                    <span class="brand-name">Adrian Gulay</span>
-                    <span class="brand-tagline">Android Developer</span>
-                </div>
+                <span class="brand-monogram">ALG</span>
             </div>
-            <div class="nav-menu">
-                <a href="#home" class="nav-link" data-nav-link>
-                    <span class="nav-link-number">01</span>
-                    <span class="nav-link-text">Home</span>
-                </a>
-                <a href="#about" class="nav-link" data-nav-link>
-                    <span class="nav-link-number">02</span>
-                    <span class="nav-link-text">About</span>
-                </a>
-                <a href="#experience" class="nav-link" data-nav-link>
-                    <span class="nav-link-number">03</span>
-                    <span class="nav-link-text">Experience</span>
-                </a>
-                <a href="#projects" class="nav-link" data-nav-link>
-                    <span class="nav-link-number">04</span>
-                    <span class="nav-link-text">Projects</span>
-                </a>
-                <a href="#skills" class="nav-link" data-nav-link>
-                    <span class="nav-link-number">05</span>
-                    <span class="nav-link-text">Skills</span>
-                </a>
-                <a href="#contact" class="nav-link nav-link-cta" data-nav-link>
-                    Let's Talk
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-cta">Hire Me</a>
             </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#contact" class="mobile-link">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-grid"></div>
-            <div class="hero-gradient"></div>
+        <div class="hero-bg-text">ANDROID</div>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="availability-pill">
+                    <span class="pulse-dot"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="hero-heading">
+                    <span class="line-wrap"><em class="italic-word">Crafting</em></span>
+                    <span class="line-wrap">Enterprise</span>
+                    <span class="line-wrap">Mobile <span class="gold-word">Apps.</span></span>
+                </h1>
+                <p class="hero-sub">
+                    Android Developer with 5+ years building workforce management 
+                    systems, learning platforms, and real-time applications 
+                    that move businesses forward.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-gold">View Projects <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn-ghost">Let's Talk</a>
+                </div>
+                <div class="hero-metrics">
+                    <div class="metric">
+                        <span class="metric-val">5+</span>
+                        <span class="metric-lbl">Years</span>
+                    </div>
+                    <div class="metric-sep"></div>
+                    <div class="metric">
+                        <span class="metric-val">10+</span>
+                        <span class="metric-lbl">Projects</span>
+                    </div>
+                    <div class="metric-sep"></div>
+                    <div class="metric">
+                        <span class="metric-val">100+</span>
+                        <span class="metric-lbl">Users</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-img-frame">
+                    <img src="images/AdrianGulay.jpg" alt="Adrian Lawrence Gulay" class="hero-photo">
+                    <div class="frame-accent frame-tl"></div>
+                    <div class="frame-accent frame-br"></div>
+                    <div class="floating-card fc-top">
+                        <i class="fab fa-android"></i>
+                        <div>
+                            <strong>Android Dev</strong>
+                            <small>Java · Kotlin · Firebase</small>
+                        </div>
+                    </div>
+                    <div class="floating-card fc-bottom">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <strong>Hero Kitchen</strong>
+                            <small>2024 – Present</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hero-content">
-            <div class="hero-badge" data-aos="fade-up">
-                <i class="fas fa-code"></i>
-                <span>Available for opportunities</span>
-            </div>
-            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
-                Building Mobile Solutions
-                <span class="gradient-text">That Matter</span>
-            </h1>
-            <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
-                Android Developer specializing in enterprise applications with 5+ years of experience 
-                transforming complex business requirements into intuitive mobile experiences.
-            </p>
-            <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
-                <div class="stat-item">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Projects Delivered</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Companies</div>
-                </div>
-            </div>
-            <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
-                <a href="#projects" class="btn btn-primary">
-                    View My Work
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    Get In Touch
-                    <i class="fas fa-paper-plane"></i>
-                </a>
-            </div>
-            <div class="hero-scroll" data-aos="fade-up" data-aos-delay="500">
-                <div class="scroll-indicator">
-                    <span>Scroll to explore</span>
-                    <div class="scroll-line"></div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
-            <div class="image-wrapper">
-                <img src="images/AdrianGulay.jpg" alt="Adrian Lawrence Gulay" class="profile-img">
-                <div class="image-decoration decoration-1"></div>
-                <div class="image-decoration decoration-2"></div>
-            </div>
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-track"><div class="scroll-runner"></div></div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="section about-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-label">
-                    <span class="label-number">02</span>
-                    <span class="label-text">About Me</span>
-                </div>
-                <h2 class="section-title">Crafting Digital Experiences</h2>
+            <div class="section-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span>About Me</span>
             </div>
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <div class="text-block">
-                        <p class="lead-text">
-                            I'm a technology professional who transforms complex business challenges into 
-                            elegant mobile solutions. With over 5 years of experience, I've developed a 
-                            unique blend of Android development expertise and IT infrastructure knowledge.
-                        </p>
-                        <p>
-                            Currently at <strong>Hero Kitchen Detailers Inc.</strong>, I lead the development 
-                            of comprehensive mobile applications including workforce management systems, learning 
-                            platforms, and specialized training tools. My approach combines technical precision 
-                            with user-centric design, ensuring solutions that are both powerful and intuitive.
-                        </p>
-                        <p>
-                            My background in IT operations at <strong>New Century Books</strong> gives me a 
-                            holistic understanding of technology ecosystems. This combination allows me to build 
-                            applications that are not just technically sound, but operationally practical and 
-                            scalable for real-world business environments.
-                        </p>
-                    </div>
-                    <div class="expertise-grid">
-                        <div class="expertise-item">
-                            <i class="fas fa-mobile-alt"></i>
-                            <h4>Mobile Development</h4>
-                            <p>Native Android apps with Java & Kotlin</p>
+            <div class="about-grid">
+                <div class="about-heading-col">
+                    <h2 class="section-title">Developer.<br><em>Problem Solver.</em><br>Builder.</h2>
+                    <div class="about-highlights-stack">
+                        <div class="hl-card">
+                            <div class="hl-icon"><i class="fas fa-briefcase"></i></div>
+                            <div>
+                                <strong>Android Developer</strong>
+                                <span>Hero Kitchen Detailers Inc.</span>
+                            </div>
                         </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-database"></i>
-                            <h4>Backend Integration</h4>
-                            <p>Firebase, MySQL, PHP APIs</p>
+                        <div class="hl-card">
+                            <div class="hl-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div>
+                                <strong>BS Information Technology</strong>
+                                <span>Cavite State University</span>
+                            </div>
                         </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-cogs"></i>
-                            <h4>IT Operations</h4>
-                            <p>System administration & support</p>
+                        <div class="hl-card">
+                            <div class="hl-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <strong>Pandi, Bulacan</strong>
+                                <span>Philippines</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-highlights" data-aos="fade-left">
-                    <div class="highlight-card highlight-primary">
-                        <div class="highlight-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <div class="highlight-content">
-                            <h3>Current Role</h3>
-                            <p>Android Developer</p>
-                            <span class="highlight-company">Hero Kitchen Detailers Inc.</span>
-                        </div>
-                    </div>
-                    <div class="highlight-card highlight-secondary">
-                        <div class="highlight-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="highlight-content">
-                            <h3>Education</h3>
-                            <p>BS in Information Technology</p>
-                            <span class="highlight-company">Cavite State University</span>
-                        </div>
-                    </div>
-                    <div class="highlight-card highlight-accent">
-                        <div class="highlight-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="highlight-content">
-                            <h3>Location</h3>
-                            <p>Pandi, Bulacan</p>
-                            <span class="highlight-company">Philippines</span>
-                        </div>
+                <div class="about-text-col">
+                    <p class="about-lead">
+                        I'm a technology professional who transforms complex business 
+                        challenges into elegant, scalable mobile solutions.
+                    </p>
+                    <p class="about-body">
+                        Currently at <strong>Hero Kitchen Detailers Inc.</strong>, I lead development of 
+                        comprehensive mobile applications — from workforce management systems 
+                        and real-time scheduling to full-featured learning platforms and 
+                        specialized training tools.
+                    </p>
+                    <p class="about-body">
+                        My prior background in IT operations at <strong>New Century Books</strong> gives 
+                        me a holistic view of technology ecosystems, letting me build 
+                        solutions that are technically sound, operationally practical, 
+                        and built to scale.
+                    </p>
+                    <div class="expertise-pills">
+                        <span class="ep">Native Android</span>
+                        <span class="ep">Firebase</span>
+                        <span class="ep">Real-time Systems</span>
+                        <span class="ep">Material Design</span>
+                        <span class="ep">REST APIs</span>
+                        <span class="ep">MySQL</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience -->
     <section id="experience" class="section experience-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-label">
-                    <span class="label-number">03</span>
-                    <span class="label-text">Work Experience</span>
-                </div>
-                <h2 class="section-title">Professional Journey</h2>
+            <div class="section-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span>Work Experience</span>
             </div>
-            <div class="experience-timeline">
-                <!-- Experience 1 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2024 - Present</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Android Developer</h3>
-                            <div class="company-badge">
-                                <i class="fas fa-building"></i>
-                                Hero Kitchen Detailers Inc.
-                            </div>
+            <h2 class="section-title">Professional Journey</h2>
+
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="tl-item reveal">
+                    <div class="tl-aside">
+                        <div class="tl-year">2024 — Now</div>
+                        <div class="tl-dot-wrap">
+                            <div class="tl-dot active"></div>
+                            <div class="tl-line"></div>
                         </div>
-                        <div class="timeline-description">
-                            <p class="role-summary">
-                                Leading mobile application development for workforce management and training systems, 
-                                serving 100+ employees across multiple locations.
-                            </p>
-                            <div class="achievements">
-                                <h4><i class="fas fa-star"></i> Key Achievements</h4>
-                                <ul>
-                                    <li>Developed comprehensive Employee Time Management app reducing administrative overhead by 40%</li>
-                                    <li>Built real-time scheduling system improving operational efficiency and reducing scheduling conflicts</li>
-                                    <li>Created Learning Management System (LMS) increasing training completion rates by 60%</li>
-                                    <li>Implemented Firebase Authentication with 99.9% uptime ensuring secure user access</li>
-                                    <li>Designed Material Design interfaces improving user satisfaction scores by 35%</li>
-                                </ul>
+                    </div>
+                    <div class="tl-card">
+                        <div class="tl-card-header">
+                            <div>
+                                <h3 class="tl-role">Android Developer</h3>
+                                <div class="tl-company"><i class="fas fa-building"></i> Hero Kitchen Detailers Inc.</div>
                             </div>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Java</span>
-                                <span class="tech-badge">Kotlin</span>
-                                <span class="tech-badge">Android Studio</span>
-                                <span class="tech-badge">Firebase</span>
-                                <span class="tech-badge">Material Design</span>
-                            </div>
+                            <div class="tl-badge current">Current</div>
+                        </div>
+                        <p class="tl-summary">
+                            Leading mobile application development for workforce management and training systems serving 100+ employees across multiple locations.
+                        </p>
+                        <ul class="tl-achievements">
+                            <li>Built Employee Time Management app, cutting administrative overhead by <strong>40%</strong></li>
+                            <li>Developed real-time scheduling system, significantly reducing operational conflicts</li>
+                            <li>Created LMS platform increasing training completion rates by <strong>60%</strong></li>
+                            <li>Implemented Firebase Authentication with <strong>99.9%</strong> uptime</li>
+                            <li>Designed Material Design interfaces boosting user satisfaction by <strong>35%</strong></li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>Java</span><span>Kotlin</span><span>Firebase</span><span>Android Studio</span><span>Material Design</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Experience 2 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2019 - 2023</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>IT Staff / Admin Officer</h3>
-                            <div class="company-badge">
-                                <i class="fas fa-building"></i>
-                                New Century Books
+                <!-- Job 2 -->
+                <div class="tl-item reveal">
+                    <div class="tl-aside">
+                        <div class="tl-year">2019 — 2023</div>
+                        <div class="tl-dot-wrap">
+                            <div class="tl-dot"></div>
+                        </div>
+                    </div>
+                    <div class="tl-card">
+                        <div class="tl-card-header">
+                            <div>
+                                <h3 class="tl-role">IT Staff / Admin Officer</h3>
+                                <div class="tl-company"><i class="fas fa-building"></i> New Century Books</div>
                             </div>
                         </div>
-                        <div class="timeline-description">
-                            <p class="role-summary">
-                                Managed complete IT infrastructure and technical support for multi-department organization, 
-                                ensuring 99% system uptime.
-                            </p>
-                            <div class="achievements">
-                                <h4><i class="fas fa-star"></i> Key Achievements</h4>
-                                <ul>
-                                    <li>Provided technical support to 50+ employees across multiple departments</li>
-                                    <li>Reduced average resolution time by 45% through implementation of remote support tools</li>
-                                    <li>Managed workstation deployments reducing setup time from 4 hours to 1.5 hours</li>
-                                    <li>Maintained 99% network uptime through proactive monitoring and maintenance</li>
-                                    <li>Created comprehensive IT documentation improving knowledge transfer</li>
-                                </ul>
-                            </div>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Network Administration</span>
-                                <span class="tech-badge">AnyDesk</span>
-                                <span class="tech-badge">Microsoft Office</span>
-                                <span class="tech-badge">System Monitoring</span>
-                            </div>
+                        <p class="tl-summary">
+                            Managed complete IT infrastructure and technical support for a multi-department organization, maintaining 99% system uptime.
+                        </p>
+                        <ul class="tl-achievements">
+                            <li>Provided technical support to <strong>50+</strong> employees across departments</li>
+                            <li>Cut average resolution time by <strong>45%</strong> via remote support tools</li>
+                            <li>Reduced workstation setup time from 4 hours to <strong>1.5 hours</strong></li>
+                            <li>Maintained <strong>99%</strong> network uptime through proactive monitoring</li>
+                            <li>Created comprehensive IT documentation improving knowledge transfer</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>Network Admin</span><span>AnyDesk</span><span>Microsoft Office</span><span>System Monitoring</span>
                         </div>
                     </div>
                 </div>
@@ -294,484 +250,408 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects" class="section projects-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-label">
-                    <span class="label-number">04</span>
-                    <span class="label-text">Featured Work</span>
-                </div>
-                <h2 class="section-title">Recent Projects</h2>
-                <p class="section-description">
-                    A showcase of mobile solutions I've built to solve real business challenges
-                </p>
+            <div class="section-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span>Featured Work</span>
             </div>
-            
-            <div class="projects-grid">
-                <!-- Project 1: Hero Clock-in/out App -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-number">01</div>
-                    <div class="project-image-wrapper">
-                        <div class="project-carousel">
-                            <div class="carousel-track">
-                                <img src="images/app3.jpg" alt="Hero Clock-in - Dashboard" class="carousel-img active">
-                                <img src="images/app2.jpg" alt="Hero Clock-in - Schedule" class="carousel-img">
-                                <img src="images/app1.jpg" alt="Hero Clock-in - Tickets" class="carousel-img">
+            <h2 class="section-title">Recent Projects</h2>
+
+            <!-- Project 1 -->
+            <div class="project reveal">
+                <div class="project-number-bg">01</div>
+                <div class="project-media">
+                    <div class="project-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-img carousel-placeholder hero-clockin-placeholder active">
+                                <div class="hc-logo-mock">
+                                    <div class="hc-logo-icon-wrap">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="40" cy="44" r="26" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2.5"/>
+                                            <circle cx="40" cy="44" r="20" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.5" opacity="0.6"/>
+                                            <line x1="40" y1="44" x2="40" y2="28" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round"/>
+                                            <line x1="40" y1="44" x2="52" y2="50" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"/>
+                                            <circle cx="40" cy="44" r="3" fill="#6D28D9"/>
+                                            <line x1="30" y1="14" x2="50" y2="14" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+                                            <line x1="40" y1="14" x2="40" y2="18" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M28 44 L32 40 L36 42 L40 36 L44 38 L48 34 L52 44" stroke="#6D28D9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+                                        </svg>
+                                    </div>
+                                    <div class="hc-wordmark">Hero Clock-in</div>
+                                    <div class="hc-tagline-mock">Workforce Management App</div>
+                                </div>
+                                <div class="hc-screens-hint">
+                                    <div class="hc-screen-card hc-screen-card--active"><div class="hc-screen-icon"><i class="fas fa-clock"></i></div><span>Clock In</span></div>
+                                    <div class="hc-screen-card"><div class="hc-screen-icon"><i class="fas fa-calendar"></i></div><span>Schedule</span></div>
+                                    <div class="hc-screen-card"><div class="hc-screen-icon"><i class="fas fa-ticket-alt"></i></div><span>Tickets</span></div>
+                                    <div class="hc-screen-card"><div class="hc-screen-icon"><i class="fas fa-map-marker-alt"></i></div><span>Location</span></div>
+                                </div>
+                                <div class="hc-note">📸 Screenshots coming soon</div>
                             </div>
-                            <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="carousel-dots">
-                                <span class="dot active" onclick="goToSlide(this, 0)"></span>
-                                <span class="dot" onclick="goToSlide(this, 1)"></span>
-                                <span class="dot" onclick="goToSlide(this, 2)"></span>
-                            </div>
+
+                            <!-- ADD YOUR TRAINING SCREENSHOTS HERE:-->
+                            <img src="images/training_1.jpg" alt="Training" class="carousel-img">
+                            <img src="images/training_2.jpg" alt="Training" class="carousel-img">
+
                         </div>
-                        <button class="image-expand" onclick="expandProjectImages(this)">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag tag-primary">Mobile App</span>
-                            <span class="tag tag-secondary">Workforce Management</span>
-                        </div>
-                        <h3 class="project-title">Clock-in/out App</h3>
-                        <p class="project-description">
-                            Comprehensive employee time tracking and workforce management system featuring real-time 
-                            clock-in/out, schedule viewing, restaurant assignments, and ticketing with photo uploads. 
-                            Streamlines operations for pest control technicians with offline-first architecture.
-                        </p>
-                        <div class="project-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Real-time time tracking & GPS verification</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Daily schedules with restaurant assignments</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Ticket system with photo documentation</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Admin dashboard for attendance monitoring</span>
-                            </div>
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-pill">Java</span>
-                            <span class="tech-pill">Android Studio</span>
-                            <span class="tech-pill">Firebase</span>
-                            <span class="tech-pill">MySQL</span>
-                            <span class="tech-pill">GPS Services</span>
-                        </div>
-                        <div class="project-impact">
-                            <div class="impact-metric">
-                                <strong>40%</strong>
-                                <span>Reduced Admin Time</span>
-                            </div>
-                            <div class="impact-metric">
-                                <strong>100+</strong>
-                                <span>Active Users</span>
-                            </div>
+                        <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+                    
+                            <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                            <!-- add one dot per screenshot above: -->
+                            <span class="dot" onclick="goToSlide(this, 1)"></span>
+                            <span class="dot" onclick="goToSlide(this, 2)"></span>
+
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 2: Hero Training App -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-number">02</div>
-                    <div class="project-image-wrapper">
-                        <div class="project-carousel">
-                            <div class="carousel-track">
-                                <img src="images/training1.jpg" alt="Training App - Home" class="carousel-img active">
-                                <img src="images/training2.jpg" alt="Training App - Videos" class="carousel-img">
-                                <img src="images/training3.jpg" alt="Training App - Journey" class="carousel-img">
-                                <img src="images/training4.jpg" alt="Training App - Progress" class="carousel-img">
-                                <img src="images/training5.jpg" alt="Training App - Checklist" class="carousel-img">
-                                <img src="images/training6.jpg" alt="Training App - Achievements" class="carousel-img">
-                                <img src="images/training7.jpg" alt="Training App - Profile" class="carousel-img">
-                            </div>
-                            <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="carousel-dots">
-                                <span class="dot active" onclick="goToSlide(this, 0)"></span>
-                                <span class="dot" onclick="goToSlide(this, 1)"></span>
-                                <span class="dot" onclick="goToSlide(this, 2)"></span>
-                                <span class="dot" onclick="goToSlide(this, 3)"></span>
-                                <span class="dot" onclick="goToSlide(this, 4)"></span>
-                                <span class="dot" onclick="goToSlide(this, 5)"></span>
-                                <span class="dot" onclick="goToSlide(this, 6)"></span>
-                            </div>
-                        </div>
-                        <button class="image-expand" onclick="expandProjectImages(this)">
-                            <i class="fas fa-expand"></i>
-                        </button>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="ptag">Mobile App</span>
+                        <span class="ptag ptag-gold">Workforce Management</span>
                     </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag tag-primary">Mobile App</span>
-                            <span class="tag tag-secondary">Learning Platform</span>
+                    <h3 class="project-name">Hero Clock-in/out App</h3>
+                    <p class="project-desc">
+                        Hero Clock-in/out App is an Android workforce app for pest control teams. Technicians clock in and out with GPS-backed verification, see daily schedules with restaurant assignments, and file service tickets with photo documentation. The system is built offline-first, so work continues when connectivity is spotty and syncs when the network returns. A companion admin view supports attendance monitoring and operational oversight. Built with Java in Android Studio, using Firebase, MySQL, and device GPS.
+                    </p>
+                    <div class="project-feats">
+                        <div class="feat"><i class="fas fa-check"></i> Clock in / clock out — Time tracking with real-time status and GPS verification.</div>
+                        <div class="feat"><i class="fas fa-check"></i> Schedule — Daily schedules with restaurant (site) assignments.</div>
+                        <div class="feat"><i class="fas fa-check"></i> Tickets — Service tickets with photo uploads for documentation.</div>
+                        <div class="feat"><i class="fas fa-check"></i> Location — Location-aware workflows tied to assignments and verification.</div>
+                        <div class="feat"><i class="fas fa-check"></i> Offline-first — Core actions work without a constant connection; data syncs when online.</div>
+                        <div class="feat"><i class="fas fa-check"></i> Admin / reporting — Dashboard-style monitoring of attendance and workforce activity.</div>
+                       
+                    </div>
+                    <div class="project-stack">
+                        <span>Java</span><span>Android Studio</span><span>Firebase</span><span>MySQL</span><span>GPS Services</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project project-reverse reveal">
+                <div class="project-number-bg">02</div>
+                <div class="project-media">
+                    <div class="project-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-img carousel-placeholder hero-training-placeholder active">
+                                <div class="ht-logo-mock">
+                                    <div class="ht-logo-icon-wrap">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="10" y="16" width="44" height="54" rx="6" fill="#1A2A4A" stroke="#C47B2B" stroke-width="2"/>
+                                            <line x1="18" y1="30" x2="46" y2="30" stroke="#C47B2B" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                                            <line x1="18" y1="38" x2="46" y2="38" stroke="#C47B2B" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                                            <line x1="18" y1="46" x2="38" y2="46" stroke="#C47B2B" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                                            <rect x="14" y="10" width="36" height="10" rx="3" fill="#C47B2B"/>
+                                            <circle cx="60" cy="56" r="16" fill="#1A3A2A" stroke="#4ADE80" stroke-width="2"/>
+                                            <path d="M54 56 L58 60 L67 51" stroke="#4ADE80" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ht-wordmark">Hero Training</div>
+                                    <div class="ht-tagline-mock">Learning Management System</div>
+                                </div>
+                                <div class="ht-screens-hint">
+                                    <div class="ht-screen-card"><div class="ht-screen-icon"><i class="fas fa-play-circle"></i></div><span>Videos</span></div>
+                                    <div class="ht-screen-card ht-screen-card--active"><div class="ht-screen-icon"><i class="fas fa-route"></i></div><span>Journey</span></div>
+                                    <div class="ht-screen-card"><div class="ht-screen-icon"><i class="fas fa-trophy"></i></div><span>Badges</span></div>
+                                    <div class="ht-screen-card"><div class="ht-screen-icon"><i class="fas fa-chart-line"></i></div><span>Progress</span></div>
+                                </div>
+                                <div class="ht-note">📸 Screenshots coming soon</div>
+                            </div>
+
+                            <!-- ADD YOUR TRAINING SCREENSHOTS HERE:-->
+                            <img src="images/training_1.jpg" alt="Training" class="carousel-img">
+                            <img src="images/training_2.jpg" alt="Training" class="carousel-img">
+                            
                         </div>
-                        <h3 class="project-title">Training App (LMS)</h3>
-                        <p class="project-description">
-                            Interactive learning management system designed for pest control technician training. 
-                            Features comprehensive video tutorials, step-by-step learning journeys, achievement 
-                            checklists, and real-time progress tracking to ensure effective skill development.
-                        </p>
-                        <div class="project-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Video library with categorized training content</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Learning journeys with step-by-step modules</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Achievement system with skill validation</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Progress tracking and completion metrics</span>
-                            </div>
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-pill">Java</span>
-                            <span class="tech-pill">Android Studio</span>
-                            <span class="tech-pill">Firebase</span>
-                            <span class="tech-pill">MySQL</span>
-                            <span class="tech-pill">Video Streaming</span>
-                        </div>
-                        <div class="project-impact">
-                            <div class="impact-metric">
-                                <strong>60%</strong>
-                                <span>Higher Completion Rate</span>
-                            </div>
-                            <div class="impact-metric">
-                                <strong>50+</strong>
-                                <span>Training Modules</span>
-                            </div>
+                        <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+
+                            <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                            <!-- add one dot per screenshot above: -->
+                            <span class="dot" onclick="goToSlide(this, 1)"></span>
+                            <span class="dot" onclick="goToSlide(this, 2)"></span>
+                           
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 3: Mic Test Band App -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-number">03</div>
-                    <div class="project-image-wrapper">
-                        <div class="project-carousel">
-                            <div class="carousel-track">
-                                <img src="images/chords1.jpg" alt="Mic Test - Home" class="carousel-img active">
-                                <img src="images/chords2.jpg" alt="Mic Test - Schedule" class="carousel-img">
-                                <img src="images/chords3.jpg" alt="Mic Test - Chords" class="carousel-img">
-                                <img src="images/chords4.jpg" alt="Mic Test - Transpose" class="carousel-img">
-                                <img src="images/chords5.jpg" alt="Mic Test - Services" class="carousel-img">
-                                <img src="images/chords6.jpg" alt="Mic Test - Announcements" class="carousel-img">
-                                <img src="images/chords7.jpg" alt="Mic Test - Team" class="carousel-img">
-                                <img src="images/chords8.jpg" alt="Mic Test - Team" class="carousel-img">
-                            </div>
-                            <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="carousel-dots">
-                                <span class="dot active" onclick="goToSlide(this, 0)"></span>
-                                <span class="dot" onclick="goToSlide(this, 1)"></span>
-                                <span class="dot" onclick="goToSlide(this, 2)"></span>
-                                <span class="dot" onclick="goToSlide(this, 3)"></span>
-                                <span class="dot" onclick="goToSlide(this, 4)"></span>
-                                <span class="dot" onclick="goToSlide(this, 5)"></span>
-                                <span class="dot" onclick="goToSlide(this, 6)"></span>
-                            </div>
-                        </div>
-                        <button class="image-expand" onclick="expandProjectImages(this)">
-                            <i class="fas fa-expand"></i>
-                        </button>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="ptag">Mobile App</span>
+                        <span class="ptag ptag-gold">Learning Platform</span>
                     </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag tag-primary">Mobile App</span>
-                            <span class="tag tag-secondary">Church Management</span>
-                        </div>
-                        <h3 class="project-title">Mic Test Band App</h3>
-                        <p class="project-description">
-                            All-in-one worship management platform for churches enabling worship leaders to schedule 
-                            services, musicians to access chord charts with transpose functionality, and members to 
-                            stay informed with announcements and events.
-                        </p>
-                        <div class="project-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Service scheduling with song lineup builder</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Chord charts with key transpose functionality</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Digital chord library with search</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Team assignments and notifications</span>
-                            </div>
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-pill">Java</span>
-                            <span class="tech-pill">Android Studio</span>
-                            <span class="tech-pill">Firebase</span>
-                            <span class="tech-pill">Supabase</span>
-                            <span class="tech-pill">Chord Detection</span>
-                        </div>
-                        <div class="project-impact">
-                            <div class="impact-metric">
-                                <strong>30+</strong>
-                                <span>Active Musicians</span>
-                            </div>
-                            <div class="impact-metric">
-                                <strong>200+</strong>
-                                <span>Song Database</span>
-                            </div>
-                        </div>
+                    <h3 class="project-name">Hero Training App (LMS)</h3>
+                    <p class="project-desc">
+                        Hero Training is a field-focused LMS delivered as an Android app. Technicians work through categorized video content and step-by-step learning journeys tied to real service areas (e.g. termite, rodent, maintenance). An achievement system and service checklists validate skills and reinforce procedures, while progress is tracked per user so completion status stays accurate across sessions. The app is built with Java in Android Studio, with Firebase for authentication and cloud data, and integrated video streaming/playback for training content.
+                    </p>
+                    <div class="project-feats">
+                        <div class="feat"><i class="fas fa-check"></i>Video library — Categorized training videos with in-app playback for easy browsing by topic or service line.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Learning journeys — Sequential modules and week-style paths so training follows a clear order.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Achievement & checklist system — Skill validation through checklists and completion tracking aligned to services and training goals.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Progress tracking — Per-user completion and advancement synced to the cloud (e.g. Firebase) for reliable progress across devices.</div>
+                    </div>
+                    <div class="project-stack">
+                        <span>Java</span><span>Android Studio</span><span>Firebase</span><span>MySQL</span><span>Video Streaming</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Project 3 -->
+            <div class="project reveal">
+                <div class="project-number-bg">03</div>
+                <div class="project-media">
+                    <div class="project-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-img carousel-placeholder mic-test-placeholder active">
+                                <div class="mt-logo-mock">
+                                    <div class="mt-logo-icon-wrap">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="28" y="8" width="24" height="36" rx="12" fill="#1A1200" stroke="#C9A84C" stroke-width="2"/>
+                                            <line x1="28" y1="22" x2="52" y2="22" stroke="#C9A84C" stroke-width="1.5" opacity="0.6"/>
+                                            <line x1="28" y1="29" x2="52" y2="29" stroke="#C9A84C" stroke-width="1.5" opacity="0.6"/>
+                                            <line x1="28" y1="36" x2="52" y2="36" stroke="#C9A84C" stroke-width="1.5" opacity="0.6"/>
+                                            <path d="M20 44 Q20 58 40 58 Q60 58 60 44" stroke="#C9A84C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                            <line x1="40" y1="58" x2="40" y2="70" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+                                            <line x1="28" y1="70" x2="52" y2="70" stroke="#C9A84C" stroke-width="3" stroke-linecap="round"/>
+                                            <circle cx="62" cy="24" r="4" fill="#E2C070" opacity="0.8"/>
+                                            <line x1="66" y1="24" x2="66" y2="14" stroke="#E2C070" stroke-width="1.5" opacity="0.8"/>
+                                            <line x1="66" y1="14" x2="72" y2="16" stroke="#E2C070" stroke-width="1.5" opacity="0.8"/>
+                                        </svg>
+                                    </div>
+                                    <div class="mt-wordmark">Mic Test</div>
+                                    <div class="mt-tagline-mock">Worship Band App</div>
+                                </div>
+                                <div class="mt-screens-hint">
+                                    <div class="mt-screen-card"><div class="mt-screen-icon"><i class="fas fa-calendar-alt"></i></div><span>Schedule</span></div>
+                                    <div class="mt-screen-card mt-screen-card--active"><div class="mt-screen-icon"><i class="fas fa-guitar"></i></div><span>Chords</span></div>
+                                    <div class="mt-screen-card"><div class="mt-screen-icon"><i class="fas fa-music"></i></div><span>Songs</span></div>
+                                    <div class="mt-screen-card"><div class="mt-screen-icon"><i class="fas fa-users"></i></div><span>Team</span></div>
+                                </div>
+                                <div class="mt-note">📸 Screenshots coming soon</div>
+                            </div>
+
+                            <!-- ADD YOUR MIC TEST SCREENSHOTS HERE:-->
+                            <img src="images/mictest_1.jpg" alt="Mic Test" class="carousel-img">
+                            <img src="images/mictest_2.jpg" alt="Mic Test" class="carousel-img">
+                            
+                        </div>
+                        <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+
+                            <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                            <!-- add one dot per screenshot above:-->
+                            <span class="dot" onclick="goToSlide(this, 1)"></span>
+                            <span class="dot" onclick="goToSlide(this, 2)"></span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="ptag">Mobile App</span>
+                        <span class="ptag ptag-gold">Church Management</span>
+                    </div>
+                    <h3 class="project-name">Mic Test Band App</h3>
+                    <p class="project-desc">
+                        Mic Test is a worship-team companion app built for Android. Leaders and musicians can browse and manage a shared song library with chord charts, transpose on the fly, and keep chord notation easy to read with smart highlighting. The home experience surfaces the week’s services and church announcements, while scheduling ties services and repertoire together so the team always knows what to prepare.
+                    </p>
+                    <div class="project-feats">
+                        <div class="feat"><i class="fas fa-check"></i>Home hub — Shows a verse of the day, announcements, and a this-week view of services, with a path to see more of the schedule..</div>
+                        <div class="feat"><i class="fas fa-check"></i>Service scheduling — Search, create, and browse services; open a service for details (type, location/context, timing, etc., as you’ve built in schedule detail).</div>
+                        <div class="feat"><i class="fas fa-check"></i>Song library — Search the catalog, add songs (title, artist, lyrics, key), and edit entries; data is backed by Supabase.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Chord charts — Lyrics are shown with chord highlighting so charts are easier to read.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Transpose — Musicians can change the key when viewing a song so the chart matches the rehearsal or service.</div>
+                    </div>
+                    <div class="project-stack">
+                        <span>Java</span><span>Android Studio</span><span>Firebase</span><span>Supabase</span><span>Chord Detection</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Engr's Brew -->
+            <div class="project project-reverse reveal">
+                <div class="project-number-bg">04</div>
+                <div class="project-media">
+                    <div class="project-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-img carousel-placeholder engrs-brew-placeholder active">
+                                <div class="eb-logo-mock">
+                                    <div class="eb-logo-icon-wrap">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="12" y="34" width="44" height="34" rx="6" fill="#EDE8DF" stroke="#1A366B" stroke-width="2.5"/>
+                                            <path d="M56 42 Q68 42 68 55 Q68 68 56 68" stroke="#1A366B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                            <rect x="10" y="30" width="48" height="8" rx="4" fill="#1A366B"/>
+                                            <ellipse cx="34" cy="22" rx="22" ry="5" fill="#1A366B"/>
+                                            <path d="M14 22 Q14 6 34 6 Q54 6 54 22" fill="#1A366B"/>
+                                            <path d="M20 18 Q24 10 34 9" stroke="#EDE8DF" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+                                            <path d="M24 28 Q26 24 24 20" stroke="#1A366B" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+                                            <path d="M34 28 Q36 22 34 18" stroke="#1A366B" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+                                        </svg>
+                                    </div>
+                                    <div class="eb-wordmark">Engr's Brew</div>
+                                    <div class="eb-tagline-mock">Coffee Loyalty App</div>
+                                </div>
+                                <div class="eb-screens-hint">
+                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-qrcode"></i></div><span>My QR</span></div>
+                                    <div class="eb-screen-card eb-screen-card--active"><div class="eb-screen-icon"><i class="fas fa-star"></i></div><span>Points</span></div>
+                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-coffee"></i></div><span>Rewards</span></div>
+                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-user"></i></div><span>Profile</span></div>
+                                </div>
+                                <div class="eb-note">📸 Screenshots coming soon</div>
+                            </div>
+
+                            <!-- ADD YOUR ENGR'S BREW SCREENSHOTS HERE: -->
+                            <img src="images/engrbrew_1.jpg" alt="Engr's Brew" class="carousel-img">
+                            <img src="images/engrbrew_2.jpg" alt="Engr's Brew" class="carousel-img">
+                           
+                        </div>
+                        <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+
+                            <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                            <!-- add one dot per screenshot above:-->
+                            <span class="dot" onclick="goToSlide(this, 1)"></span>
+                            <span class="dot" onclick="goToSlide(this, 2)"></span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="ptag">Mobile App</span>
+                        <span class="ptag ptag-gold">Loyalty System</span>
+                    </div>
+                    <h3 class="project-name">Engr's Brew</h3>
+                    <p class="project-desc">
+                        Engr’s Brew is a native Android loyalty application built for a neighborhood café. It connects the counter experience to a digital wallet: customers don’t need to order online to earn rewards—they show a unique QR code in the app when they pay in person. Store staff use a dedicated admin scanner to read that code, enter the purchase amount, and credit points immediately. Behind the scenes, Firebase Realtime Database keeps balances and activity in sync so customers see updates without refreshing the app.
+                        The app is organized around everyday loyalty tasks: viewing your QR, checking points and history, browsing rewards and tiers, and managing profile settings.
+                    </p>
+                    <div class="project-feats">
+                        <div class="feat"><i class="fas fa-check"></i>QR-based loyalty — Earn points from physical, in-store purchases; no online order required to participate.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Admin scanner panel — Staff-facing flow to scan customer QR codes and enter purchase amounts to award points</div>
+                        <div class="feat"><i class="fas fa-check"></i>Real-time updates — Points and related data sync with Firebase Realtime Database for instant balance and activity updates.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Points & history — Track earnings and see how points change over time.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Rewards — Browse and redeem rewards tied to the loyalty program.</div>
+                    </div>
+                    <div class="project-stack">
+                        <span>Java</span><span>Android Studio</span><span>Firebase RTDB</span><span>QR Code</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills" class="section skills-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-label">
-                    <span class="label-number">05</span>
-                    <span class="label-text">Technical Skills</span>
-                </div>
-                <h2 class="section-title">Expertise & Technologies</h2>
+            <div class="section-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span>Technical Skills</span>
             </div>
-            
-            <div class="skills-container">
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
-                    <div class="category-icon">
-                        <i class="fas fa-mobile-alt"></i>
+            <h2 class="section-title">Expertise &amp;<br><em>Technologies</em></h2>
+
+            <div class="skills-grid">
+                <div class="skill-cat reveal">
+                    <div class="sc-header">
+                        <div class="sc-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Mobile Development</h3>
                     </div>
-                    <h3 class="category-title">Mobile Development</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-java"></i></div>
-                            <span>Java</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-android"></i></div>
-                            <span>Kotlin</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-mobile"></i></div>
-                            <span>Android Studio</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-palette"></i></div>
-                            <span>Material Design</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-plug"></i></div>
-                            <span>API Integration</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-bug"></i></div>
-                            <span>Testing & Debugging</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 88%"></div>
-                            </div>
-                        </div>
+                    <div class="sc-bars">
+                        <div class="sb-item"><span>Java</span><div class="sb-track"><div class="sb-fill" style="width:95%"></div></div><em>95%</em></div>
+                        <div class="sb-item"><span>Kotlin</span><div class="sb-track"><div class="sb-fill" style="width:85%"></div></div><em>85%</em></div>
+                        <div class="sb-item"><span>Android Studio</span><div class="sb-track"><div class="sb-fill" style="width:95%"></div></div><em>95%</em></div>
+                        <div class="sb-item"><span>Material Design</span><div class="sb-track"><div class="sb-fill" style="width:90%"></div></div><em>90%</em></div>
+                        <div class="sb-item"><span>API Integration</span><div class="sb-track"><div class="sb-fill" style="width:90%"></div></div><em>90%</em></div>
                     </div>
                 </div>
 
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-                    <div class="category-icon">
-                        <i class="fas fa-database"></i>
+                <div class="skill-cat reveal">
+                    <div class="sc-header">
+                        <div class="sc-icon"><i class="fas fa-database"></i></div>
+                        <h3>Backend &amp; Databases</h3>
                     </div>
-                    <h3 class="category-title">Backend & Databases</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-fire"></i></div>
-                            <span>Firebase</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <span>MySQL</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-php"></i></div>
-                            <span>PHP</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-server"></i></div>
-                            <span>Supabase</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
-                            <span>REST APIs</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                            <span>Cloud Services</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 85%"></div>
-                            </div>
-                        </div>
+                    <div class="sc-bars">
+                        <div class="sb-item"><span>Firebase</span><div class="sb-track"><div class="sb-fill" style="width:92%"></div></div><em>92%</em></div>
+                        <div class="sb-item"><span>MySQL</span><div class="sb-track"><div class="sb-fill" style="width:88%"></div></div><em>88%</em></div>
+                        <div class="sb-item"><span>PHP</span><div class="sb-track"><div class="sb-fill" style="width:85%"></div></div><em>85%</em></div>
+                        <div class="sb-item"><span>Supabase</span><div class="sb-track"><div class="sb-fill" style="width:80%"></div></div><em>80%</em></div>
+                        <div class="sb-item"><span>REST APIs</span><div class="sb-track"><div class="sb-fill" style="width:90%"></div></div><em>90%</em></div>
                     </div>
                 </div>
 
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-                    <div class="category-icon">
-                        <i class="fas fa-tools"></i>
+                <div class="skill-cat reveal">
+                    <div class="sc-header">
+                        <div class="sc-icon"><i class="fas fa-tools"></i></div>
+                        <h3>IT &amp; Operations</h3>
                     </div>
-                    <h3 class="category-title">IT & Operations</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                            <span>Network Admin</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-desktop"></i></div>
-                            <span>System Support</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-wrench"></i></div>
-                            <span>Troubleshooting</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
-                            <span>Microsoft Office</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-headset"></i></div>
-                            <span>Remote Support</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-book"></i></div>
-                            <span>Documentation</span>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 85%"></div>
-                            </div>
-                        </div>
+                    <div class="sc-bars">
+                        <div class="sb-item"><span>Network Admin</span><div class="sb-track"><div class="sb-fill" style="width:85%"></div></div><em>85%</em></div>
+                        <div class="sb-item"><span>System Support</span><div class="sb-track"><div class="sb-fill" style="width:90%"></div></div><em>90%</em></div>
+                        <div class="sb-item"><span>Troubleshooting</span><div class="sb-track"><div class="sb-fill" style="width:92%"></div></div><em>92%</em></div>
+                        <div class="sb-item"><span>Remote Support</span><div class="sb-track"><div class="sb-fill" style="width:90%"></div></div><em>90%</em></div>
+                        <div class="sb-item"><span>Documentation</span><div class="sb-track"><div class="sb-fill" style="width:85%"></div></div><em>85%</em></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-label">
-                    <span class="label-number">06</span>
-                    <span class="label-text">Get In Touch</span>
+            <div class="contact-inner">
+                <div class="contact-left">
+                    <div class="section-eyebrow light">
+                        <span class="eyebrow-line"></span>
+                        <span>Get In Touch</span>
+                    </div>
+                    <h2 class="section-title light">Let's Build<br><em>Something Great.</em></h2>
+                    <p class="contact-sub">
+                        Available for Android development roles, freelance projects, 
+                        or technical consulting. Let's talk about what we can create together.
+                    </p>
+                    <div class="contact-channels">
+                        <a href="/cdn-cgi/l/email-protection#08696c7a61696664697f7a6d666b6d266f7d646971486f65696164266b6765" class="channel">
+                            <div class="ch-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="ch-info">
+                                <strong>Email</strong>
+                                <span><span class="__cf_email__" data-cfemail="f79693859e96999b96808592999492d990829b968eb7909a969e9bd994989a">[email&#160;protected]</span></span>
+                            </div>
+                            <i class="fas fa-arrow-right ch-arrow"></i>
+                        </a>
+                        <a href="tel:+639913817678" class="channel">
+                            <div class="ch-icon"><i class="fas fa-phone"></i></div>
+                            <div class="ch-info">
+                                <strong>Phone</strong>
+                                <span>099-1381-7678</span>
+                            </div>
+                            <i class="fas fa-arrow-right ch-arrow"></i>
+                        </a>
+                        <a href="https://www.facebook.com/adriangulay" target="_blank" class="channel">
+                            <div class="ch-icon"><i class="fab fa-facebook"></i></div>
+                            <div class="ch-info">
+                                <strong>Facebook</strong>
+                                <span>Adrian Lawrence Gulay</span>
+                            </div>
+                            <i class="fas fa-arrow-right ch-arrow"></i>
+                        </a>
+                    </div>
                 </div>
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-description">
-                    I'm always interested in hearing about new projects and opportunities. 
-                    Whether you need Android development expertise or IT solutions, let's connect.
-                </p>
-            </div>
-
-            <div class="contact-content">
-                <div class="contact-cards">
-                    <a href="mailto:adrianlawrence.gulay@gmail.com" class="contact-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email</h3>
-                        <p>adrianlawrence.gulay@gmail.com</p>
-                        <span class="contact-arrow"><i class="fas fa-arrow-right"></i></span>
-                    </a>
-                    
-                    <a href="tel:+639913817678" class="contact-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3>Phone</h3>
-                        <p>099-1381-7678</p>
-                        <span class="contact-arrow"><i class="fas fa-arrow-right"></i></span>
-                    </a>
-                    
-                    <a href="https://www.facebook.com/adriangulay" target="_blank" class="contact-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="contact-icon">
-                            <i class="fab fa-facebook"></i>
-                        </div>
-                        <h3>Facebook</h3>
-                        <p>Adrian Lawrence Gulay</p>
-                        <span class="contact-arrow"><i class="fas fa-arrow-right"></i></span>
-                    </a>
-                    
-                    <div class="contact-card contact-card-location" data-aos="fade-up" data-aos-delay="400">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3>Location</h3>
-                        <p>Brgy. Malibo Bata<br>Pandi, Bulacan, Philippines</p>
+                <div class="contact-right">
+                    <div class="contact-card-big">
+                        <i class="fas fa-map-marker-alt loc-icon"></i>
+                        <h3>Based in the Philippines</h3>
+                        <p>Brgy. Malibo Bata, Pandi, Bulacan</p>
+                        <div class="loc-note">Open to remote &amp; on-site opportunities</div>
                     </div>
                 </div>
             </div>
@@ -781,13 +661,15 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-inner">
                 <div class="footer-brand">
-                    <h3>Adrian Lawrence Gulay</h3>
-                    <p>Android Developer & IT Professional</p>
+                    <span class="brand-monogram">ALG</span>
+                    <div>
+                        <strong>Adrian Lawrence Gulay</strong>
+                        <small>Android Developer &amp; IT Professional</small>
+                    </div>
                 </div>
                 <div class="footer-links">
-                    <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#experience">Experience</a>
                     <a href="#projects">Projects</a>
@@ -796,30 +678,22 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Adrian Lawrence Gulay. Crafted with precision and passion.</p>
+                <p>&copy; 2024 Adrian Lawrence Gulay · Built with precision &amp; passion</p>
             </div>
         </div>
     </footer>
 
-    <!-- Image Viewer Modal -->
-    <div id="imageViewer" class="image-viewer">
-        <div class="viewer-overlay" onclick="closeViewer()"></div>
-        <button class="viewer-close" onclick="closeViewer()">
-            <i class="fas fa-times"></i>
-        </button>
-        <button class="viewer-nav viewer-prev" onclick="viewerNavigate(-1)">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="viewer-content">
-            <img id="viewerImage" src="" alt="">
-            <div class="viewer-counter">
-                <span id="viewerCurrent">1</span> / <span id="viewerTotal">1</span>
-            </div>
+    <!-- Image Viewer -->
+    <div id="imageViewer" class="viewer">
+        <div class="viewer-backdrop" onclick="closeViewer()"></div>
+        <button class="viewer-close" onclick="closeViewer()"><i class="fas fa-times"></i></button>
+        <button class="viewer-prev" onclick="viewerNav(-1)"><i class="fas fa-chevron-left"></i></button>
+        <div class="viewer-stage">
+            <img id="viewerImg" src="" alt="">
+            <div class="viewer-count"><span id="vCur">1</span> / <span id="vTotal">1</span></div>
         </div>
-        <button class="viewer-nav viewer-next" onclick="viewerNavigate(1)">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <div class="viewer-thumbnails" id="viewerThumbnails"></div>
+        <button class="viewer-next" onclick="viewerNav(1)"><i class="fas fa-chevron-right"></i></button>
+        <div id="viewerThumbs" class="viewer-thumbs"></div>
     </div>
 
     <script src="script.js"></script>
