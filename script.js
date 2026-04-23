@@ -228,6 +228,20 @@ window.addEventListener('load', () => {
 });
 
 // ========================================
+// PROJECT FEATURES — SHOW MORE / SHOW LESS
+// ========================================
+function toggleProjectFeats(btn) {
+    const featsContainer = btn.closest('.project-feats');
+    const extras = featsContainer.querySelectorAll('.feat-extra');
+    const label = btn.querySelector('.show-more-label');
+    const isOpen = btn.classList.contains('is-open');
+
+    extras.forEach(el => el.classList.toggle('is-visible', !isOpen));
+    btn.classList.toggle('is-open', !isOpen);
+    label.textContent = isOpen ? 'Show more' : 'Show less';
+}
+
+// ========================================
 // CONSOLE SIGNATURE
 // ========================================
 console.log('%c ALG ', 'background:#C9A84C;color:#0E0E0E;font-size:20px;font-weight:bold;padding:4px 12px;border-radius:4px;');

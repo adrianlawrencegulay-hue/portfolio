@@ -83,7 +83,7 @@
             </div>
             <div class="hero-right">
                 <div class="hero-img-frame">
-                    <img src="images/AdrianGulay1.png" alt="Adrian Lawrence Gulay" class="hero-photo">
+                    <img src="images/AdrianGulay.png" alt="Adrian Lawrence Gulay" class="hero-photo">
                     <div class="frame-accent frame-tl"></div>
                     <div class="frame-accent frame-br"></div>
                     <div class="floating-card fc-top">
@@ -475,7 +475,7 @@
                 </div>
             </div>
 
-            <!-- Project 4: Engr's Brew -->
+                <!-- Project 4: Engr's Brew -->
             <div class="project project-reverse reveal">
                 <div class="project-number-bg">04</div>
                 <div class="project-media">
@@ -496,13 +496,13 @@
                                         </svg>
                                     </div>
                                     <div class="eb-wordmark">Engr's Brew</div>
-                                    <div class="eb-tagline-mock">Coffee Loyalty App</div>
+                                    <div class="eb-tagline-mock">Coffee Ordering & Loyalty App</div>
                                 </div>
                                 <div class="eb-screens-hint">
-                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-qrcode"></i></div><span>My QR</span></div>
-                                    <div class="eb-screen-card eb-screen-card--active"><div class="eb-screen-icon"><i class="fas fa-star"></i></div><span>Points</span></div>
-                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-coffee"></i></div><span>Rewards</span></div>
-                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-user"></i></div><span>Profile</span></div>
+                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-mug-hot"></i></div><span>Menu</span></div>
+                                    <div class="eb-screen-card eb-screen-card--active"><div class="eb-screen-icon"><i class="fas fa-qrcode"></i></div><span>Order QR</span></div>
+                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-gift"></i></div><span>Rewards</span></div>
+                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-medal"></i></div><span>Tiers</span></div>
                                 </div>
                                 <div class="eb-note">📸 Screenshots coming soon</div>
                             </div>
@@ -510,39 +510,46 @@
                             <!-- ADD YOUR ENGR'S BREW SCREENSHOTS HERE: -->
                             <img src="images/engrbrew_1.jpg" alt="Engr's Brew" class="carousel-img">
                             <img src="images/engrbrew_2.jpg" alt="Engr's Brew" class="carousel-img">
-                           
+
                         </div>
                         <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)"><i class="fas fa-chevron-left"></i></button>
                         <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)"><i class="fas fa-chevron-right"></i></button>
                         <div class="carousel-dots">
-
                             <span class="dot active" onclick="goToSlide(this, 0)"></span>
-                            <!-- add one dot per screenshot above:-->
                             <span class="dot" onclick="goToSlide(this, 1)"></span>
                             <span class="dot" onclick="goToSlide(this, 2)"></span>
-                            
                         </div>
                     </div>
                 </div>
                 <div class="project-info">
                     <div class="project-tags">
                         <span class="ptag">Mobile App</span>
-                        <span class="ptag ptag-gold">Loyalty System</span>
+                        <span class="ptag ptag-gold">Ordering & Loyalty</span>
                     </div>
                     <h3 class="project-name">Engr's Brew</h3>
                     <p class="project-desc">
-                        Engr’s Brew is a native Android loyalty application built for a neighborhood café. It connects the counter experience to a digital wallet: customers don’t need to order online to earn rewards—they show a unique QR code in the app when they pay in person. Store staff use a dedicated admin scanner to read that code, enter the purchase amount, and credit points immediately. Behind the scenes, Firebase Realtime Database keeps balances and activity in sync so customers see updates without refreshing the app.
-                        The app is organized around everyday loyalty tasks: viewing your QR, checking points and history, browsing rewards and tiers, and managing profile settings.
+                        A native Android coffee shop app that pairs in-app ordering with a tier-based loyalty program. Customers build a cart and check out via a time-bound QR code at the counter; the order screen advances live through Pending → Preparing → Receipt as staff fulfill it. Behind the scenes, Firebase Transactions keep point balances safe from race conditions.
                     </p>
                     <div class="project-feats">
-                        <div class="feat"><i class="fas fa-check"></i>QR-based loyalty — Earn points from physical, in-store purchases; no online order required to participate.</div>
-                        <div class="feat"><i class="fas fa-check"></i>Admin scanner panel — Staff-facing flow to scan customer QR codes and enter purchase amounts to award points</div>
-                        <div class="feat"><i class="fas fa-check"></i>Real-time updates — Points and related data sync with Firebase Realtime Database for instant balance and activity updates.</div>
-                        <div class="feat"><i class="fas fa-check"></i>Points & history — Track earnings and see how points change over time.</div>
-                        <div class="feat"><i class="fas fa-check"></i>Rewards — Browse and redeem rewards tied to the loyalty program.</div>
+                        <div class="feat"><i class="fas fa-check"></i>QR-based ordering — Carts generate a 20-minute checkout QR; the customer screen advances live as staff progress the order.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Reward redemption — Free-drink redemptions create a 5-minute QR; the screen reacts in real time the moment staff confirm.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Tier-based loyalty — Bronze, Silver, Gold, and Platinum tiers earned at 10% of every peso spent.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Atomic point handling — Firebase Transactions on totalPoints and totalRedeemed prevent race conditions if a QR is scanned twice.</div>
+
+                        <!-- Hidden by default — revealed by Show More button -->
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Categorized menu with size picker — Six emoji-tagged categories with a synced sticky sidebar, multi-size pricing (Grande / Venti / Hot), sold-out overlays, and a featured-item badge.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Admin scanner — Single ZXing scanner routes both ORDER: and REDEEM: codes; confirmed orders write to per-user history and a global allOrders log with timestamps.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Admin tooling — Menu and redeemable item CRUD, searchable customer directory, manual point adjustments, and a complete store-wide order history — all role-gated by users/{uid}/role.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Persistent cart & live home dashboard — Gson-serialized cart in SharedPreferences survives app kill; home shows points progress, an auto-rotating promo carousel, and the latest preparing order.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Store info with deep links — One-tap launch into Google Maps Navigation and the system dialer.</div>
+
+                        <button class="show-more-btn" onclick="toggleProjectFeats(this)">
+                            <span class="show-more-label">Show more</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
                     <div class="project-stack">
-                        <span>Java</span><span>Android Studio</span><span>Firebase RTDB</span><span>QR Code</span>
+                        <span>Java</span><span>Android Studio</span><span>Firebase Auth</span><span>Firebase RTDB</span><span>Firebase Transactions</span><span>ZXing</span><span>Glide</span><span>Material Design</span>
                     </div>
                 </div>
             </div>
@@ -620,11 +627,11 @@
                         or technical consulting. Let's talk about what we can create together.
                     </p>
                     <div class="contact-channels">
-                        <a href="mailto:adrianlawrence.gulay@gmail.com" class="channel">
+                        <a href="/cdn-cgi/l/email-protection#08696c7a61696664697f7a6d666b6d266f7d646971486f65696164266b6765" class="channel">
                             <div class="ch-icon"><i class="fas fa-envelope"></i></div>
                             <div class="ch-info">
                                 <strong>Email</strong>
-                                <span>adrianlawrence.gulay@gmail.com</span>
+                                <span><span class="__cf_email__" data-cfemail="f79693859e96999b96808592999492d990829b968eb7909a969e9bd994989a">[email&#160;protected]</span></span>
                             </div>
                             <i class="fas fa-arrow-right ch-arrow"></i>
                         </a>

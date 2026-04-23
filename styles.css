@@ -1754,3 +1754,44 @@ body.js-ready .reveal.visible {
     .viewer-next { right: 8px; }
     .viewer-thumbs { display: none; }
 }
+
+/* ========================================
+   PROJECT FEATURES — SHOW MORE / SHOW LESS
+   ======================================== */
+.feat-extra {
+    display: none;
+}
+.feat-extra.is-visible {
+    display: flex;
+}
+
+.show-more-btn {
+    margin-top: 12px;
+    align-self: flex-start;
+    background: transparent;
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s var(--ease);
+}
+.show-more-btn:hover {
+    background: var(--gold-dim);
+    border-color: var(--gold);
+    color: var(--gold-light);
+}
+.show-more-btn i {
+    transition: transform 0.3s var(--ease);
+    font-size: 0.6875rem;
+}
+.show-more-btn.is-open i {
+    transform: rotate(180deg);
+}
