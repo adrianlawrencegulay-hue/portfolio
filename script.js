@@ -76,6 +76,43 @@ const skillObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skill-cat').forEach(cat => skillObserver.observe(cat));
 
 // ========================================
+// FEATURE SHOWCASE — slide navigation
+// ========================================
+function initShowcases() {
+    document.querySelectorAll('.feature-showcase').forEach(showcase => {
+        const slides  = showcase.querySelectorAll('.fs-slide');
+        const dots    = showcase.querySelectorAll('.fs-dot');
+        const prevBtn = showcase.querySelector('.fs-prev');
+        const nextBtn = showcase.querySelector('.fs-next');
+        const counter = showcase.querySelector('.fs-counter');
+        let current   = 0;
+
+        function goTo(index) {
+            slides[current].classList.remove('active');
+            dots[current].classList.remove('active');
+            current = (index + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+            if (counter) counter.textContent = (current + 1) + ' / ' + slides.length;
+        }
+
+        dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+        if (prevBtn) prevBtn.addEventListener('click', () => goTo(current - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
+
+        // Auto-advance every 6 seconds, pause on hover
+        let timer = setInterval(() => goTo(current + 1), 6000);
+        showcase.addEventListener('mouseenter', () => clearInterval(timer));
+        showcase.addEventListener('mouseleave', () => {
+            clearInterval(timer);
+            timer = setInterval(() => goTo(current + 1), 6000);
+        });
+
+        if (counter) counter.textContent = '1 / ' + slides.length;
+    });
+}
+
+// ========================================
 // CAROUSELS — original working version
 // ========================================
 function initCarousels() {
@@ -126,7 +163,10 @@ function initCarousels() {
 }
 
 // Call initCarousels when DOM is ready
-document.addEventListener('DOMContentLoaded', initCarousels);
+document.addEventListener('DOMContentLoaded', () => {
+    initCarousels();
+    initShowcases();
+});
 
 function moveCarousel(button, direction) {
     const carousel = button.closest('.project-carousel');

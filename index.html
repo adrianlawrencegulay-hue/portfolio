@@ -56,8 +56,8 @@
                     <span class="line-wrap">Mobile <span class="gold-word">Apps.</span></span>
                 </h1>
                 <p class="hero-sub">
-                    Android Developer with 5+ years building workforce management 
-                    systems, learning platforms, and real-time applications 
+                    Android Developer with 5+ years building workforce management
+                    systems, learning platforms, and real-time applications
                     that move businesses forward.
                 </p>
                 <div class="hero-actions">
@@ -145,19 +145,19 @@
                 </div>
                 <div class="about-text-col">
                     <p class="about-lead">
-                        I'm a technology professional who transforms complex business 
+                        I'm a technology professional who transforms complex business
                         challenges into elegant, scalable mobile solutions.
                     </p>
                     <p class="about-body">
-                        Currently at <strong>Hero Kitchen Detailers Inc.</strong>, I lead development of 
-                        comprehensive mobile applications — from workforce management systems 
-                        and real-time scheduling to full-featured learning platforms and 
+                        Currently at <strong>Hero Kitchen Detailers Inc.</strong>, I lead development of
+                        comprehensive mobile applications — from workforce management systems
+                        and real-time scheduling to full-featured learning platforms and
                         specialized training tools.
                     </p>
                     <p class="about-body">
-                        My prior background in IT operations at <strong>New Century Books</strong> gives 
-                        me a holistic view of technology ecosystems, letting me build 
-                        solutions that are technically sound, operationally practical, 
+                        My prior background in IT operations at <strong>New Century Books</strong> gives
+                        me a holistic view of technology ecosystems, letting me build
+                        solutions that are technically sound, operationally practical,
                         and built to scale.
                     </p>
                     <div class="expertise-pills">
@@ -181,9 +181,7 @@
                 <span>Work Experience</span>
             </div>
             <h2 class="section-title">Professional Journey</h2>
-
             <div class="timeline">
-                <!-- Job 1 -->
                 <div class="tl-item reveal">
                     <div class="tl-aside">
                         <div class="tl-year">2024 — Now</div>
@@ -204,19 +202,17 @@
                             Leading mobile application development for workforce management and training systems serving 100+ employees across multiple locations.
                         </p>
                         <ul class="tl-achievements">
-                            <li>Built Employee Time Management app, cutting administrative overhead by <strong>40%</strong></li>
-                            <li>Developed real-time scheduling system, significantly reducing operational conflicts</li>
-                            <li>Created LMS platform increasing training completion rates by <strong>60%</strong></li>
-                            <li>Implemented Firebase Authentication with <strong>99.9%</strong> uptime</li>
-                            <li>Designed Material Design interfaces boosting user satisfaction by <strong>35%</strong></li>
+                            <li>Built a WEA-style 14-hour work safety alert using AlarmManager exact alarms, full-screen intents, and VibrationAttributes to bypass DND and silent mode</li>
+                            <li>Architected a dual-backend location system (Firestore + Realtime DB with onDisconnect presence) with custom Canvas-drawn map markers</li>
+                            <li>Implemented an offline-first clock-in queue and spatial-cache geocoder, reducing redundant Geocoder API calls for technicians at repeat sites</li>
+                            <li>Created LMS platform with ExoPlayer video system, cloud-first progress sync, and signature-backed service checklists</li>
+                            <li>Designed Material Design interfaces with role-based navigation across 5 distinct user roles</li>
                         </ul>
                         <div class="tl-tags">
-                            <span>Java</span><span>Kotlin</span><span>Firebase</span><span>Android Studio</span><span>Material Design</span>
+                            <span>Java</span><span>Firebase</span><span>Google Maps SDK</span><span>ExoPlayer</span><span>PHP/MySQL</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Job 2 -->
                 <div class="tl-item reveal">
                     <div class="tl-aside">
                         <div class="tl-year">2019 — 2023</div>
@@ -259,290 +255,618 @@
             </div>
             <h2 class="section-title">Recent Projects</h2>
 
-            <!-- Project 1 -->
+            <!-- ════════════════════════════════════════
+                 PROJECT 1 — Hero Kitchen App
+                 ════════════════════════════════════════ -->
             <div class="project reveal">
                 <div class="project-number-bg">01</div>
+
+                <!-- FEATURE SHOWCASE -->
                 <div class="project-media">
-                    <div class="project-carousel">
-                        <div class="carousel-track">
-                            <div class="carousel-img carousel-placeholder hero-clockin-placeholder active">
-                                <div class="hc-logo-mock">
-                                    <div class="hc-logo-icon-wrap">
-                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="40" cy="44" r="26" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2.5"/>
-                                            <circle cx="40" cy="44" r="20" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.5" opacity="0.6"/>
-                                            <line x1="40" y1="44" x2="40" y2="28" stroke="#6D28D9" stroke-width="2.5" stroke-linecap="round"/>
-                                            <line x1="40" y1="44" x2="52" y2="50" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"/>
-                                            <circle cx="40" cy="44" r="3" fill="#6D28D9"/>
-                                            <line x1="30" y1="14" x2="50" y2="14" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
-                                            <line x1="40" y1="14" x2="40" y2="18" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
-                                            <path d="M28 44 L32 40 L36 42 L40 36 L44 38 L48 34 L52 44" stroke="#6D28D9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
-                                        </svg>
-                                    </div>
-                                    <div class="hc-wordmark">Hero Kitchen App</div>
-                                    <div class="hc-tagline-mock">Workforce Management App</div>
+                    <div class="feature-showcase">
+
+                        <!-- Slide 1: Home Dashboard -->
+                        <div class="fs-slide active">
+                            <div class="fs-phone">
+                                <div class="fs-phone-frame">
+                                    <img src="images/hk_home.jpg" alt="Home Dashboard" class="fs-phone-screen">
                                 </div>
-                                <div class="hc-screens-hint">
-                                    <div class="hc-screen-card hc-screen-card--active"><div class="hc-screen-icon"><i class="fas fa-clock"></i></div><span>Clock In</span></div>
-                                    <div class="hc-screen-card"><div class="hc-screen-icon"><i class="fas fa-calendar"></i></div><span>Schedule</span></div>
-                                    <div class="hc-screen-card"><div class="hc-screen-icon"><i class="fas fa-ticket-alt"></i></div><span>Tickets</span></div>
-                                    <div class="hc-screen-card"><div class="hc-screen-icon"><i class="fas fa-map-marker-alt"></i></div><span>Location</span></div>
-                                </div>
-                                <div class="hc-note">📸 Screenshots coming soon</div>
                             </div>
-
-                            <!-- ADD YOUR TRAINING SCREENSHOTS HERE:-->
-                            <img src="images/training_1.jpg" alt="Training" class="carousel-img">
-                            <img src="images/training_2.jpg" alt="Training" class="carousel-img">
-
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-home"></i> Home Dashboard</div>
+                                <h3 class="fs-title">Today's & Tomorrow's Schedule at a Glance</h3>
+                                <p class="fs-desc">The home screen greets the technician with their name and online status. Today's Service card shows the active job — "Aling Nenatitas - Karinderyas" at 05:00 PM, FREE - DEEP CLEANING, currently IN PROGRESS. Next Day's Service shows May 07 assignments below.</p>
+                                <ul class="fs-points">
+                                    <li>Today May 06 — FREE DEEP CLEANING, IN PROGRESS</li>
+                                    <li>Tabs: Schedule, Emergency, Audit, Others</li>
+                                    <li>My Work Summary banner — task & presence activity</li>
+                                </ul>
+                            </div>
                         </div>
-                        <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                        <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                        <div class="carousel-dots">
-                    
-                            <span class="dot active" onclick="goToSlide(this, 0)"></span>
-                            <!-- add one dot per screenshot above: -->
-                            <span class="dot" onclick="goToSlide(this, 1)"></span>
-                            <span class="dot" onclick="goToSlide(this, 2)"></span>
 
+                        <!-- Slide 2: Clock In -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                <div class="fs-phone-frame">
+                                    <img src="images/hk_clockin.jpg" alt="Clock In" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-clock"></i> Active Service</div>
+                                <h3 class="fs-title">GPS-Verified Clock In with Live Timer</h3>
+                                <p class="fs-desc">Once clocked in, a dialog shows the live service duration (00:30:11), client name "Aling Nenatitas - Karinderyas", GPS-resolved address (211c F. Valentine, Manila), timestamp, and the captured photo — all required before tapping "Service Done".</p>
+                                <ul class="fs-points">
+                                    <li>Time In: 04:50 PM | Duration live counter: 00:30:11</li>
+                                    <li>GPS resolved via SmartGeocoder — 500m cache for repeat sites</li>
+                                    <li>Photo + location queued offline if no internet</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Live Map -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                <div class="fs-phone-frame">
+                                    <img src="images/hk_map.jpg" alt="Live Map" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-map"></i> Live Tracking</div>
+                                <h3 class="fs-title">74 Employees Tracked Live on Google Maps</h3>
+                                <p class="fs-desc">The Live Tracker shows all 74 employees as custom Canvas-drawn markers across Metro Manila — each a colored circle with the employee's initials. A bottom sheet lists every employee with their initials avatar, LIVE badge, and ONLINE/OFFLINE status in real time.</p>
+                                <ul class="fs-points">
+                                    <li>74 employees tracked — markers across Quezon City & Manila</li>
+                                    <li>LIVE badge + green ONLINE / grey OFFLINE per employee</li>
+                                    <li>Firestore snapshot listener — updates without refresh</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: 14h Alert -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                <div class="fs-phone-frame">
+                                    <img src="images/hk_alert.jpg" alt="14h Alert" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-bell"></i> Safety System</div>
+                                <h3 class="fs-title">14-Hour Work Safety Alert</h3>
+                                <p class="fs-desc">A full-screen red emergency alert fires automatically when a technician has been clocked in for 14 hours straight. It displays through the lock screen, wakes the device, and vibrates even on silent mode — the technician must tap DISMISS to acknowledge.</p>
+                                <ul class="fs-points">
+                                    <li>AlarmManager.setAlarmClock — exact alarm, not approximate</li>
+                                    <li>setShowWhenLocked + setTurnScreenOn — visible on lock screen</li>
+                                    <li>VibrationAttributes.USAGE_ALARM — overrides DND and silent</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5: Revolving Funds -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                <div class="fs-phone-frame">
+                                    <img src="images/hk_revolving.jpg" alt="Revolving Funds" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-receipt"></i> Expense Management</div>
+                                <h3 class="fs-title">Digital Invoice with TIN Auto-Lookup</h3>
+                                <p class="fs-desc">The Revolving Funds invoice form auto-generates a reference number (I114ZCDNGBQN) and resolves the supplier name from TIN — typing "000-106-866" instantly fills "AYALA PROPERTY MANAGEMENT CORPORATION". Includes Invoice Date, Invoice Number, Supplier info, and VAT Details.</p>
+                                <ul class="fs-points">
+                                    <li>Auto-generated Ref# per transaction</li>
+                                    <li>TIN auto-completes supplier name from database</li>
+                                    <li>VAT / Non-VATable toggle with auto-computation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6: Ticket -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                <div class="fs-phone-frame">
+                                    <img src="images/hk_ticket.jpg" alt="Ticket System" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-ticket-alt"></i> Ticket System</div>
+                                <h3 class="fs-title">Assigned Tickets with Comment Tracking</h3>
+                                <p class="fs-desc">The Others tab shows all tickets assigned to the technician. Each card displays the ticket number (TK-250620-1897), client name, department, date created, and an OPEN badge with a red bubble showing the number of unread comment exchanges — 12, 2, 8, and 5.</p>
+                                <ul class="fs-points">
+                                    <li>Auto-generated ticket IDs (TK-YYMMDD-####)</li>
+                                    <li>Comment count badge shows active exchanges per ticket</li>
+                                    <li>Color-coded cards — orange = active, red = urgent</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Nav bar -->
+                        <div class="fs-nav">
+                            <button class="fs-nav-btn fs-prev"><i class="fas fa-chevron-left"></i></button>
+                            <div class="fs-dots">
+                                <button class="fs-dot active"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                            </div>
+                            <span class="fs-counter">1 / 6</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project Info -->
                 <div class="project-info">
-                    <div class="project-tags">
+                    <div class="project-info-inner">
+<div class="project-tags">
                         <span class="ptag">Mobile App</span>
-                        <span class="ptag ptag-gold">Workforce Management</span>
+                        <span class="ptag ptag-gold">Enterprise Workforce</span>
                     </div>
                     <h3 class="project-name">Hero Kitchen App</h3>
                     <p class="project-desc">
-                        Hero Kitchen App is an Android workforce app for pest control teams. Technicians clock in and out with GPS-backed verification, see daily schedules with restaurant assignments, and file service tickets with photo documentation. The system is built offline-first, so work continues when connectivity is spotty and syncs when the network returns. A companion admin view supports attendance monitoring and operational oversight. Built with Java in Android Studio, using Firebase, MySQL, and device GPS.
+                        A native Android workforce management platform for pest-control field operations, serving 100+ employees across five roles. Technicians clock in with GPS-verified photo capture, file structured pest-control service reports with dual signatures, and submit expense requests. Admins track employees live on a map, approve leaves and disputes, and manage schedules. Built offline-first with a full background sync service and a WEA-style 14-hour work-duration safety alert.
                     </p>
                     <div class="project-feats">
-                        <div class="feat"><i class="fas fa-check"></i> Clock in / clock out — Time tracking with real-time status and GPS verification.</div>
-                        <div class="feat"><i class="fas fa-check"></i> Schedule — Daily schedules with restaurant (site) assignments.</div>
-                        <div class="feat"><i class="fas fa-check"></i> Tickets — Service tickets with photo uploads for documentation.</div>
-                        <div class="feat"><i class="fas fa-check"></i> Location — Location-aware workflows tied to assignments and verification.</div>
-                        <div class="feat"><i class="fas fa-check"></i> Offline-first — Core actions work without a constant connection; data syncs when online.</div>
-                        <div class="feat"><i class="fas fa-check"></i> Admin / reporting — Dashboard-style monitoring of attendance and workforce activity.</div>
-                       
+                        <div class="feat"><i class="fas fa-check"></i>Offline-first clock-ins — GPS position, client, and photo are queued in a JSON-backed SharedPreferences store when offline; a background sync service submits them all when connectivity returns.</div>
+                        <div class="feat"><i class="fas fa-check"></i>WEA-style 14-hour work safety alert — AlarmManager.setAlarmClock schedules an exact wake-up; on fire, a full-screen activity launches through a full-screen notification intent, with VibrationAttributes.USAGE_ALARM overriding DND and silent mode.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Live employee tracking — Firestore snapshot listener streams real-time locations onto a Google Map with custom Canvas-drawn markers (colored circle, initials, user-ID pill); Firebase Realtime DB onDisconnect() powers accurate presence even on force-kill.</div>
+                        <div class="feat"><i class="fas fa-check"></i>SmartGeocoder with spatial cache — Reverse-geocoded addresses cached in SharedPreferences, returned when a new request is within 500m of a prior point.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Role-based UI (5 roles) — Technician, BackOffice, HouseKeep, Admin, SuperAdmin each get a tailored bottom-nav (menu items dynamically removed) and a different default landing fragment.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Complete CPAR workflow — Pest-specific service reports (Cockroach, Fly, Mosquito, Rodent, Cat, Others) with per-report preview activities and dual client+technician signature capture before submission.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Revolving Funds — Auto-generated reference numbers, TIN auto-complete, VAT/Non-VAT auto-computation, photo attachments, and a PHP/MySQL backend with three linked tables for full audit trails.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Forced update gate — Version check against a remote endpoint blocks the app until the user installs a new APK via DownloadManager + PackageInstaller.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Boot-persistent services — BootReceiver + ServiceRestartReceiver resume location tracking automatically after device restart.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>OTP password recovery — Mobile-number-first recovery via Firebase Phone Auth, bridged to email-account password reset through the Firebase Admin REST API.</div>
+                        <button class="show-more-btn" onclick="toggleProjectFeats(this)">
+                            <span class="show-more-label">Show more</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
                     <div class="project-stack">
-                        <span>Java</span><span>Android Studio</span><span>Firebase</span><span>MySQL</span><span>GPS Services</span>
+                        <span>Java</span><span>Android Studio</span><span>Firebase Auth</span><span>Firestore</span><span>Realtime DB</span><span>Firebase Storage</span><span>FCM</span><span>Google Maps SDK</span><span>PHP/CodeIgniter</span><span>MySQL</span><span>Volley</span>
                     </div>
-                    
                 </div>
-            </div>
+                    </div>
+                </div>
 
-            <!-- Project 2 -->
+            <!-- ════════════════════════════════════════
+                 PROJECT 2 — Hero Training App (LMS)
+                 ════════════════════════════════════════ -->
             <div class="project project-reverse reveal">
                 <div class="project-number-bg">02</div>
+
+                <!-- FEATURE SHOWCASE -->
                 <div class="project-media">
-                    <div class="project-carousel">
-                        <div class="carousel-track">
-                            <div class="carousel-img carousel-placeholder hero-training-placeholder active">
-                                <div class="ht-logo-mock">
-                                    <div class="ht-logo-icon-wrap">
-                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="10" y="16" width="44" height="54" rx="6" fill="#1A2A4A" stroke="#C47B2B" stroke-width="2"/>
-                                            <line x1="18" y1="30" x2="46" y2="30" stroke="#C47B2B" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                                            <line x1="18" y1="38" x2="46" y2="38" stroke="#C47B2B" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                                            <line x1="18" y1="46" x2="38" y2="46" stroke="#C47B2B" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                                            <rect x="14" y="10" width="36" height="10" rx="3" fill="#C47B2B"/>
-                                            <circle cx="60" cy="56" r="16" fill="#1A3A2A" stroke="#4ADE80" stroke-width="2"/>
-                                            <path d="M54 56 L58 60 L67 51" stroke="#4ADE80" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </div>
-                                    <div class="ht-wordmark">Hero Training</div>
-                                    <div class="ht-tagline-mock">Learning Management System</div>
+                    <div class="feature-showcase">
+
+                        <!-- Slide 1: Video Player -->
+                        <div class="fs-slide active">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/ht_video.jpg" alt="Video List" class="fs-phone-screen">
                                 </div>
-                                <div class="ht-screens-hint">
-                                    <div class="ht-screen-card"><div class="ht-screen-icon"><i class="fas fa-play-circle"></i></div><span>Videos</span></div>
-                                    <div class="ht-screen-card ht-screen-card--active"><div class="ht-screen-icon"><i class="fas fa-route"></i></div><span>Journey</span></div>
-                                    <div class="ht-screen-card"><div class="ht-screen-icon"><i class="fas fa-trophy"></i></div><span>Badges</span></div>
-                                    <div class="ht-screen-card"><div class="ht-screen-icon"><i class="fas fa-chart-line"></i></div><span>Progress</span></div>
-                                </div>
-                                <div class="ht-note">📸 Screenshots coming soon</div>
                             </div>
-
-                            <!-- ADD YOUR TRAINING SCREENSHOTS HERE:-->
-                            <img src="images/training_1.jpg" alt="Training" class="carousel-img">
-                            <img src="images/training_2.jpg" alt="Training" class="carousel-img">
-                            
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-play"></i> Video Training</div>
+                                <h3 class="fs-title">Category-Based Training Videos</h3>
+                                <p class="fs-desc">Each training category opens a dedicated screen with its video list. "General Pest Control" shows 2 videos — Assault vs Maintenance (3:03 min) and Spiral Method (5:06 min) — each with a thumbnail, play button, and duration displayed.</p>
+                                <ul class="fs-points">
+                                    <li>Hero-branded thumbnails with play button overlay</li>
+                                    <li>Video duration shown per item (3:03, 5:06 min)</li>
+                                    <li>Tapping opens ExoPlayer fullscreen with resume support</li>
+                                </ul>
+                            </div>
                         </div>
-                        <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                        <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                        <div class="carousel-dots">
 
-                            <span class="dot active" onclick="goToSlide(this, 0)"></span>
-                            <!-- add one dot per screenshot above: -->
-                            <span class="dot" onclick="goToSlide(this, 1)"></span>
-                            <span class="dot" onclick="goToSlide(this, 2)"></span>
-                           
+                        <!-- Slide 2: Progress Sync -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/ht_progress.jpg" alt="Progress Sync" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-sync"></i> Progress Tracking</div>
+                                <h3 class="fs-title">Per-Video Watch Progress Saved to Cloud</h3>
+                                <p class="fs-desc">The Fly Control category shows 3 videos each with a different watch state — "Watched 13%", "Watched Completed ✓", and "Watched 84%". Progress is saved to Firestore after every session so it persists across devices and app restarts.</p>
+                                <ul class="fs-points">
+                                    <li>Progress bar + percentage shown per video</li>
+                                    <li>"Watched Completed ✓" state when fully watched</li>
+                                    <li>Firestore source of truth — survives app reinstall</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Checklists (moved from slide 4) -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/ht_checklist.jpg" alt="Checklist Hub" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-tasks"></i> Task Checklist</div>
+                                <h3 class="fs-title">8-Category Checklist with Overall Progress</h3>
+                                <p class="fs-desc">The Technician Task Checklist shows the technician's profile photo inside a large circular progress ring (30% overall). Each of the 8 service categories has its own illustrated card and color-coded progress ring — Termite at 100% green, others at 20% orange.</p>
+                                <ul class="fs-points">
+                                    <li>Overall progress: 30% shown in main circular ring</li>
+                                    <li>Termite Service 100% ✓ — Maintenance, Emergency, Assault at 20%</li>
+                                    <li>Color changes: green = complete, orange = partial, red = none</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Home Dashboard -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/ht_home.jpg" alt="Home Dashboard" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-home"></i> Home Dashboard</div>
+                                <h3 class="fs-title">Personalized Training Overview</h3>
+                                <p class="fs-desc">The home screen greets the technician by name and gives a full overview at a glance — Journey Task Progress at 50%, pest target tiles (Rodents, Mosquito), and a Checklist preview showing Termite at 100%, Maintenance at 75%, Emergency at 25%.</p>
+                                <ul class="fs-points">
+                                    <li>Journey progress card (50%) with "View Journey" shortcut</li>
+                                    <li>"Know your targets" pest tiles — Rodents, Mosquito and more</li>
+                                    <li>Checklist summary: Termite 100%, Maintenance 75%, Emergency 25%</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Nav bar -->
+                        <div class="fs-nav">
+                            <button class="fs-nav-btn fs-prev"><i class="fas fa-chevron-left"></i></button>
+                            <div class="fs-dots">
+                                <button class="fs-dot active"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                            </div>
+                            <span class="fs-counter">1 / 4</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project Info -->
                 <div class="project-info">
-                    <div class="project-tags">
+                    <div class="project-info-inner">
+<div class="project-tags">
                         <span class="ptag">Mobile App</span>
                         <span class="ptag ptag-gold">Learning Platform</span>
                     </div>
                     <h3 class="project-name">Hero Training App (LMS)</h3>
                     <p class="project-desc">
-                        Hero Training is a field-focused LMS delivered as an Android app. Technicians work through categorized video content and step-by-step learning journeys tied to real service areas (e.g. termite, rodent, maintenance). An achievement system and service checklists validate skills and reinforce procedures, while progress is tracked per user so completion status stays accurate across sessions. The app is built with Java in Android Studio, with Firebase for authentication and cloud data, and integrated video streaming/playback for training content.
+                        A native Android Learning Management System for pest-control field technicians, pairing video-based learning with active skill validation. Technicians watch categorized training videos with smart resume, progress through week-structured learning journeys, and document real-world services via signature-backed checklists that unlock completion milestones.
                     </p>
                     <div class="project-feats">
-                        <div class="feat"><i class="fas fa-check"></i>Video library — Categorized training videos with in-app playback for easy browsing by topic or service line.</div>
-                        <div class="feat"><i class="fas fa-check"></i>Learning journeys — Sequential modules and week-style paths so training follows a clear order.</div>
-                        <div class="feat"><i class="fas fa-check"></i>Achievement & checklist system — Skill validation through checklists and completion tracking aligned to services and training goals.</div>
-                        <div class="feat"><i class="fas fa-check"></i>Progress tracking — Per-user completion and advancement synced to the cloud (e.g. Firebase) for reliable progress across devices.</div>
+                        <div class="feat"><i class="fas fa-check"></i>ExoPlayer video system with smart resume — Every video tap triggers a 3-state dialog (start fresh / resume at 2:45 / replay completed), with 5-second completion detection and software decoder fallback for device compatibility.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Cloud-first progress sync — Per-video progress writes to both SharedPreferences (instant) and Firestore (cross-device); loads fetch from cloud first and clear stale local data when the source of truth says otherwise.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Learning journeys (ongoing vs completed) — Volley fetches per-user journey progress from a PHP backend, split into tabs via ViewSwitcher with animated state transitions.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Signature-backed checklists — Eight service categories with circular progress bars; each entry submits date/time, client, supervisor sign-off via signature pad, and a photo to Firebase Storage.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Technical vs Non-Technical skills toggle — Skills tab splits 15+ training modules into filtered categories.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Offline-aware refresh — SwipeRefreshLayout triggers cloud re-fetch; no-internet detection falls back gracefully with zeroed progress bars.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Custom ModernProgressDialog — Programmatically-built replacement for the deprecated ProgressDialog, with rounded corners, elevation, and live-updating status messages.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Hybrid backend — Firebase Auth/Firestore/Storage/RTDB handle identity and media streaming; PHP/MySQL handles relational queries for journeys and checklist counts.</div>
+                        <button class="show-more-btn" onclick="toggleProjectFeats(this)">
+                            <span class="show-more-label">Show more</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
                     <div class="project-stack">
-                        <span>Java</span><span>Android Studio</span><span>Firebase</span><span>MySQL</span><span>Video Streaming</span>
+                        <span>Java</span><span>Android Studio</span><span>Firebase Auth</span><span>Firestore</span><span>Firebase Storage</span><span>Realtime DB</span><span>ExoPlayer (Media3)</span><span>Volley</span><span>PHP/MySQL</span><span>Glide</span>
                     </div>
                 </div>
-            </div>
+                    </div>
+                </div>
 
-            <!-- Project 3 -->
+            <!-- ════════════════════════════════════════
+                 PROJECT 3 — Mic Test
+                 ════════════════════════════════════════ -->
             <div class="project reveal">
                 <div class="project-number-bg">03</div>
+
+                <!-- FEATURE SHOWCASE -->
                 <div class="project-media">
-                    <div class="project-carousel">
-                        <div class="carousel-track">
-                            <div class="carousel-img carousel-placeholder mic-test-placeholder active">
-                                <div class="mt-logo-mock">
-                                    <div class="mt-logo-icon-wrap">
-                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="28" y="8" width="24" height="36" rx="12" fill="#1A1200" stroke="#C9A84C" stroke-width="2"/>
-                                            <line x1="28" y1="22" x2="52" y2="22" stroke="#C9A84C" stroke-width="1.5" opacity="0.6"/>
-                                            <line x1="28" y1="29" x2="52" y2="29" stroke="#C9A84C" stroke-width="1.5" opacity="0.6"/>
-                                            <line x1="28" y1="36" x2="52" y2="36" stroke="#C9A84C" stroke-width="1.5" opacity="0.6"/>
-                                            <path d="M20 44 Q20 58 40 58 Q60 58 60 44" stroke="#C9A84C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                            <line x1="40" y1="58" x2="40" y2="70" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
-                                            <line x1="28" y1="70" x2="52" y2="70" stroke="#C9A84C" stroke-width="3" stroke-linecap="round"/>
-                                            <circle cx="62" cy="24" r="4" fill="#E2C070" opacity="0.8"/>
-                                            <line x1="66" y1="24" x2="66" y2="14" stroke="#E2C070" stroke-width="1.5" opacity="0.8"/>
-                                            <line x1="66" y1="14" x2="72" y2="16" stroke="#E2C070" stroke-width="1.5" opacity="0.8"/>
-                                        </svg>
-                                    </div>
-                                    <div class="mt-wordmark">Mic Test</div>
-                                    <div class="mt-tagline-mock">Worship Band App</div>
+                    <div class="feature-showcase">
+
+                        <!-- Slide 1: Chord View -->
+                        <div class="fs-slide active">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/mt_chords.jpg" alt="Chord Chart" class="fs-phone-screen">
                                 </div>
-                                <div class="mt-screens-hint">
-                                    <div class="mt-screen-card"><div class="mt-screen-icon"><i class="fas fa-calendar-alt"></i></div><span>Schedule</span></div>
-                                    <div class="mt-screen-card mt-screen-card--active"><div class="mt-screen-icon"><i class="fas fa-guitar"></i></div><span>Chords</span></div>
-                                    <div class="mt-screen-card"><div class="mt-screen-icon"><i class="fas fa-music"></i></div><span>Songs</span></div>
-                                    <div class="mt-screen-card"><div class="mt-screen-icon"><i class="fas fa-users"></i></div><span>Team</span></div>
-                                </div>
-                                <div class="mt-note">📸 Screenshots coming soon</div>
                             </div>
-
-                            <!-- ADD YOUR MIC TEST SCREENSHOTS HERE:-->
-                            <img src="images/mictest_1.jpg" alt="Mic Test" class="carousel-img">
-                            <img src="images/mictest_2.jpg" alt="Mic Test" class="carousel-img">
-                            
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-music"></i> Chord Engine</div>
+                                <h3 class="fs-title">Chords Highlighted Above Lyrics</h3>
+                                <p class="fs-desc">Song "Natagpuan" in Key of D — chords are rendered in gold above each lyric line, with section labels like [Intro], [Verse], [Chorus] auto-detected. Slash chords like D/F# and A/C# are parsed correctly without breaking the layout.</p>
+                                <ul class="fs-points">
+                                    <li>Gold chord lines clearly separated from white lyric lines</li>
+                                    <li>Slash chords (D/F#, A/C#) parsed and spaced correctly</li>
+                                    <li>Section labels [Intro] [Verse] [Chorus] auto-detected</li>
+                                </ul>
+                            </div>
                         </div>
-                        <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                        <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                        <div class="carousel-dots">
 
-                            <span class="dot active" onclick="goToSlide(this, 0)"></span>
-                            <!-- add one dot per screenshot above:-->
-                            <span class="dot" onclick="goToSlide(this, 1)"></span>
-                            <span class="dot" onclick="goToSlide(this, 2)"></span>
-                            
+                        <!-- Slide 2: Transpose -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/mt_transpose.jpg" alt="Transpose" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-sliders-h"></i> Transposer</div>
+                                <h3 class="fs-title">Instant Key Change Across the Whole Chart</h3>
+                                <p class="fs-desc">"Natagpuan" transposed from Key of D up to Key of E — every chord on the chart updates instantly. D becomes E, D/F# becomes E/G#, Em becomes F#m, A/C# becomes B/D#. Slash chords transpose both root and bass independently.</p>
+                                <ul class="fs-points">
+                                    <li>Full chart re-renders in the new key instantly</li>
+                                    <li>Slash chords (E/G#, B/D#) handled recursively</li>
+                                    <li>Chord quality (m, maj, sus, 7…) always preserved</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Song Library -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/mt_songs.jpg" alt="Song Library" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-music"></i> Song Library</div>
+                                <h3 class="fs-title">Shared Song Library with Search</h3>
+                                <p class="fs-desc">A shared library of worship songs stored in Supabase, accessible by all team members. Songs are listed alphabetically with the artist name below each title. Admins can add new songs via the gold "+ Add" button — hidden for non-authorized roles.</p>
+                                <ul class="fs-points">
+                                    <li>Songs from Hillsong, Elevation, Hope Filipino and more</li>
+                                    <li>Search bar filters the list in real time</li>
+                                    <li>"+ Add" button only visible to authorized roles</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Schedule -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/mt_schedule.jpg" alt="Schedule" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-church"></i> Multi-Satellite</div>
+                                <h3 class="fs-title">Sunday Services Across Multiple Locations</h3>
+                                <p class="fs-desc">The Schedule screen lists all planned Sunday services with date, satellite location, and assigned song leaders. Each card shows which church it belongs to — WOH Acacia, WOH Arko, or Main Church — with the leaders assigned for that service.</p>
+                                <ul class="fs-points">
+                                    <li>Per-satellite services: WOH Acacia, WOH Arko, Main Church</li>
+                                    <li>Date card + assigned leaders shown per service</li>
+                                    <li>"+ Create" gated to authorized roles only</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5: Home -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/mt_home.jpg" alt="Home" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-book-open"></i> Home Dashboard</div>
+                                <h3 class="fs-title">Verse, Announcements & This Week's Services</h3>
+                                <p class="fs-desc">Home greets the user by name with their role badge (Administrator). Today's verse — Acts 1:8 — is seeded by date so every user sees the same one. Below it, team announcements and this week's scheduled services are listed at a glance.</p>
+                                <ul class="fs-points">
+                                    <li>Verse of the Day: Acts 1:8 — date-seeded, same for all users</li>
+                                    <li>Announcements feed with date stamps</li>
+                                    <li>This Week's Services — May 4–10, WOH Acacia</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Nav bar -->
+                        <div class="fs-nav">
+                            <button class="fs-nav-btn fs-prev"><i class="fas fa-chevron-left"></i></button>
+                            <div class="fs-dots">
+                                <button class="fs-dot active"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                            </div>
+                            <span class="fs-counter">1 / 5</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project Info -->
                 <div class="project-info">
-                    <div class="project-tags">
+                    <div class="project-info-inner">
+<div class="project-tags">
                         <span class="ptag">Mobile App</span>
-                        <span class="ptag ptag-gold">Church Management</span>
+                        <span class="ptag ptag-gold">Worship Team Tool</span>
                     </div>
-                    <h3 class="project-name">Mic Test Band App</h3>
+                    <h3 class="project-name">Mic Test</h3>
                     <p class="project-desc">
-                        Mic Test is a worship-team companion app built for Android. Leaders and musicians can browse and manage a shared song library with chord charts, transpose on the fly, and keep chord notation easy to read with smart highlighting. The home experience surfaces the week’s services and church announcements, while scheduling ties services and repertoire together so the team always knows what to prepare.
+                        A native Android companion app for worship teams. Musicians browse a shared song library with chord charts, transpose on the fly across all 12 keys, and import lyrics from photos using on-device OCR that preserves the original chord-over-lyric alignment. Leaders plan services across multiple church satellites with per-location song leader rosters and shared song lists.
                     </p>
                     <div class="project-feats">
-                        <div class="feat"><i class="fas fa-check"></i>Home hub — Shows a verse of the day, announcements, and a this-week view of services, with a path to see more of the schedule..</div>
-                        <div class="feat"><i class="fas fa-check"></i>Service scheduling — Search, create, and browse services; open a service for details (type, location/context, timing, etc., as you’ve built in schedule detail).</div>
-                        <div class="feat"><i class="fas fa-check"></i>Song library — Search the catalog, add songs (title, artist, lyrics, key), and edit entries; data is backed by Supabase.</div>
-                        <div class="feat"><i class="fas fa-check"></i>Chord charts — Lyrics are shown with chord highlighting so charts are easier to read.</div>
-                        <div class="feat"><i class="fas fa-check"></i>Transpose — Musicians can change the key when viewing a song so the chart matches the rehearsal or service.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Context-aware chord highlighting — A regex parser distinguishes chord lines from lyric lines and validates matches against surrounding text so "A" in "Amazing" isn't mistaken for a chord.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Full chromatic transposer — Shifts lyrics across all 12 keys with recursive slash-chord handling (D/F# transposes both root and bass) and preserves chord quality (m, maj, sus, 7, 9, 11…).</div>
+                        <div class="feat"><i class="fas fa-check"></i>OCR song import — ML Kit Text Recognition reads lyrics from a photo; per-word bounding-box coordinates are used to insert spacing so chord letters stay aligned over the right syllables.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Multi-satellite service planning — Different song-leader rosters per church location (WOH Acacia, Arko, Pandi), with custom guest entries and live add/remove of songs from a scheduled service.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Deterministic "Verse of the Day" — Date-seeded RNG ensures every user sees the same verse each day; fetched once and cached in SharedPreferences to avoid repeat API calls.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Role-based access control — Five roles (Admin, Song Leader, Musician, Media, Member) with color-coded badges and gated UI (add/edit/delete appears only for authorized roles).</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Dual backend architecture — Firebase Authentication + Realtime Database for user/auth state; Supabase (PostgREST via Retrofit) for songs, services, and announcements.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Selective Gson serialization — @Expose annotations keep auto-generated Postgres fields (id, created_at, updated_at) out of POST bodies while still reading them on responses.</div>
+                        <button class="show-more-btn" onclick="toggleProjectFeats(this)">
+                            <span class="show-more-label">Show more</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
                     <div class="project-stack">
-                        <span>Java</span><span>Android Studio</span><span>Firebase</span><span>Supabase</span><span>Chord Detection</span>
+                        <span>Java</span><span>Android Studio</span><span>Firebase Auth</span><span>Firebase RTDB</span><span>Supabase</span><span>Retrofit</span><span>ML Kit OCR</span><span>Glide</span>
                     </div>
                 </div>
-            </div>
+                    </div>
+                </div>
 
-                <!-- Project 4: Engr's Brew -->
+            <!-- ════════════════════════════════════════
+                 PROJECT 4 — Engr's Brew
+                 ════════════════════════════════════════ -->
             <div class="project project-reverse reveal">
                 <div class="project-number-bg">04</div>
+
+                <!-- FEATURE SHOWCASE -->
                 <div class="project-media">
-                    <div class="project-carousel">
-                        <div class="carousel-track">
-                            <div class="carousel-img carousel-placeholder engrs-brew-placeholder active">
-                                <div class="eb-logo-mock">
-                                    <div class="eb-logo-icon-wrap">
-                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="12" y="34" width="44" height="34" rx="6" fill="#EDE8DF" stroke="#1A366B" stroke-width="2.5"/>
-                                            <path d="M56 42 Q68 42 68 55 Q68 68 56 68" stroke="#1A366B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                            <rect x="10" y="30" width="48" height="8" rx="4" fill="#1A366B"/>
-                                            <ellipse cx="34" cy="22" rx="22" ry="5" fill="#1A366B"/>
-                                            <path d="M14 22 Q14 6 34 6 Q54 6 54 22" fill="#1A366B"/>
-                                            <path d="M20 18 Q24 10 34 9" stroke="#EDE8DF" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
-                                            <path d="M24 28 Q26 24 24 20" stroke="#1A366B" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
-                                            <path d="M34 28 Q36 22 34 18" stroke="#1A366B" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
-                                        </svg>
-                                    </div>
-                                    <div class="eb-wordmark">Engr's Brew</div>
-                                    <div class="eb-tagline-mock">Coffee Ordering & Loyalty App</div>
+                    <div class="feature-showcase">
+
+                        <!-- Slide 1: Home -->
+                        <div class="fs-slide active">
+                            <div class="fs-phone">
+                                <div class="fs-phone-frame">
+                                    <img src="images/eb_home.jpg" alt="Home" class="fs-phone-screen">
                                 </div>
-                                <div class="eb-screens-hint">
-                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-mug-hot"></i></div><span>Menu</span></div>
-                                    <div class="eb-screen-card eb-screen-card--active"><div class="eb-screen-icon"><i class="fas fa-qrcode"></i></div><span>Order QR</span></div>
-                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-gift"></i></div><span>Rewards</span></div>
-                                    <div class="eb-screen-card"><div class="eb-screen-icon"><i class="fas fa-medal"></i></div><span>Tiers</span></div>
-                                </div>
-                                <div class="eb-note">📸 Screenshots coming soon</div>
                             </div>
-
-                            <!-- ADD YOUR ENGR'S BREW SCREENSHOTS HERE: -->
-                            <img src="images/engrbrew_1.jpg" alt="Engr's Brew" class="carousel-img">
-                            <img src="images/engrbrew_2.jpg" alt="Engr's Brew" class="carousel-img">
-
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-coffee"></i> Home Screen</div>
+                                <h3 class="fs-title">Personalized Customer Dashboard</h3>
+                                <p class="fs-desc">Greets the customer by name with their tier badge and live points balance. A featured-drinks banner rotates every 3.5 seconds, followed by a points progress card showing how close they are to their next free drink.</p>
+                                <ul class="fs-points">
+                                    <li>Personalized greeting + Silver Member badge</li>
+                                    <li>Live points balance (618 pts) shown top-right</li>
+                                    <li>Quick Access tiles: Menu, Redeem, Order, Location</li>
+                                </ul>
+                            </div>
                         </div>
-                        <button class="carousel-nav carousel-prev" onclick="moveCarousel(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                        <button class="carousel-nav carousel-next" onclick="moveCarousel(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                        <div class="carousel-dots">
-                            <span class="dot active" onclick="goToSlide(this, 0)"></span>
-                            <span class="dot" onclick="goToSlide(this, 1)"></span>
-                            <span class="dot" onclick="goToSlide(this, 2)"></span>
+
+                        <!-- Slide 2: Menu -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/eb_menu.jpg" alt="Menu" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-list"></i> Menu Screen</div>
+                                <h3 class="fs-title">Browse Menu by Category</h3>
+                                <p class="fs-desc">Sticky left sidebar lists all six categories with emoji icons and the active one highlighted in dark blue. Each menu item shows its photo, name, tagline, and per-size pricing. The yellow star badge marks featured items.</p>
+                                <ul class="fs-points">
+                                    <li>6 categories: Espresso, Signature, Milk, Soda, Rice, Snacks</li>
+                                    <li>Per-size pricing displayed (Grande / Venti / Hot)</li>
+                                    <li>Featured item badges + sold-out overlays</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Order QR -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/eb_orderqr.jpg" alt="Order QR" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-qrcode"></i> Order QR</div>
+                                <h3 class="fs-title">"Show to Cashier" QR Checkout</h3>
+                                <p class="fs-desc">After checkout, the customer sees a unique order QR with their order number, total amount, and points to be earned. A live 20-minute countdown shows how long the QR is valid. The screen advances automatically once staff scan it.</p>
+                                <ul class="fs-points">
+                                    <li>Order #-ORVRDNG | ₱188 total | +18 pts</li>
+                                    <li>Live "Expires in 19:51" countdown timer</li>
+                                    <li>Cancel Order button releases reserved stock</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Tier System -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/eb_tier.jpg" alt="Tier System" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-trophy"></i> Tier Progression</div>
+                                <h3 class="fs-title">Track Tier Progress + Claim Vouchers</h3>
+                                <p class="fs-desc">A dedicated screen shows the customer's current tier (SILVER) with a progress bar to the next tier (618 / 1500 = 11% to GOLD). When a tier is reached, a one-time voucher card appears with a "Claim 1 Free Grande Drink Voucher!" button.</p>
+                                <ul class="fs-points">
+                                    <li>4-tier system: Bronze, Silver, Gold, Platinum</li>
+                                    <li>Tappable tabs reveal each tier's perks</li>
+                                    <li>Voucher claim flag prevents double-redemption</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5: Admin Scanner -->
+                        <div class="fs-slide">
+                            <div class="fs-phone">
+                                
+                                    <div class="fs-phone-frame">
+                                    <img src="images/eb_scanner.jpg" alt="Admin Scanner" class="fs-phone-screen">
+                                </div>
+                            </div>
+                            <div class="fs-content">
+                                <div class="fs-badge"><i class="fas fa-user-shield"></i> Admin Scanner</div>
+                                <h3 class="fs-title">One Scanner, Three QR Types</h3>
+                                <p class="fs-desc">Staff use a single ZXing-powered scanner to process all customer QRs. The scanner auto-detects whether it's an Order, Redemption, or Voucher code and routes it to the right confirmation flow — no menu switching required.</p>
+                                <ul class="fs-points">
+                                    <li>Corner brackets + red scan line UI</li>
+                                    <li>Auto-routes ORDER:, REDEEM:, VOUCHER: prefixes</li>
+                                    <li>Atomic Firebase Transactions on point updates</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Nav bar -->
+                        <div class="fs-nav">
+                            <button class="fs-nav-btn fs-prev"><i class="fas fa-chevron-left"></i></button>
+                            <div class="fs-dots">
+                                <button class="fs-dot active"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                                <button class="fs-dot"></button>
+                            </div>
+                            <span class="fs-counter">1 / 5</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project Info -->
                 <div class="project-info">
-                    <div class="project-tags">
+                    <div class="project-info-inner">
+<div class="project-tags">
                         <span class="ptag">Mobile App</span>
                         <span class="ptag ptag-gold">Ordering & Loyalty</span>
                     </div>
                     <h3 class="project-name">Engr's Brew</h3>
                     <p class="project-desc">
-                        A native Android coffee shop app that pairs in-app ordering with a tier-based loyalty program. Customers build a cart and check out via a time-bound QR code at the counter; the order screen advances live through Pending → Preparing → Receipt as staff fulfill it. Behind the scenes, Firebase Transactions keep point balances safe from race conditions.
+                        A native Android coffee shop app combining in-app ordering with a full tier-based loyalty program. Customers browse a categorized menu, build a cart, and check out via a time-bound QR at the counter — the order screen advances live through Pending → Preparing → Receipt as staff fulfill it. A dedicated tier screen tracks Bronze, Silver, Gold, and Platinum progress with per-tier perks, one-time claimable voucher QRs, and an in-app rating system.
                     </p>
                     <div class="project-feats">
                         <div class="feat"><i class="fas fa-check"></i>QR-based ordering — Carts generate a 20-minute checkout QR; the customer screen advances live as staff progress the order.</div>
-                        <div class="feat"><i class="fas fa-check"></i>Reward redemption — Free-drink redemptions create a 5-minute QR; the screen reacts in real time the moment staff confirm.</div>
-                        <div class="feat"><i class="fas fa-check"></i>Tier-based loyalty — Bronze, Silver, Gold, and Platinum tiers earned at 10% of every peso spent.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Tier loyalty system — Dedicated tier screen shows Bronze/Silver/Gold/Platinum progress with color-coded header, progress bar to next tier, per-tier perks tabs, and one-time claimable voucher QRs that write a claim flag to Firebase on use.</div>
+                        <div class="feat"><i class="fas fa-check"></i>Reward redemption — Free-drink redemptions create a 5-minute QR; customer screen reacts in real time the moment staff confirm, with auto-cleanup on cancel or expiry.</div>
                         <div class="feat"><i class="fas fa-check"></i>Atomic point handling — Firebase Transactions on totalPoints and totalRedeemed prevent race conditions if a QR is scanned twice.</div>
-
-                        <!-- Hidden by default — revealed by Show More button -->
-                        <div class="feat feat-extra"><i class="fas fa-check"></i>Categorized menu with size picker — Six emoji-tagged categories with a synced sticky sidebar, multi-size pricing (Grande / Venti / Hot), sold-out overlays, and a featured-item badge.</div>
-                        <div class="feat feat-extra"><i class="fas fa-check"></i>Admin scanner — Single ZXing scanner routes both ORDER: and REDEEM: codes; confirmed orders write to per-user history and a global allOrders log with timestamps.</div>
-                        <div class="feat feat-extra"><i class="fas fa-check"></i>Admin tooling — Menu and redeemable item CRUD, searchable customer directory, manual point adjustments, and a complete store-wide order history — all role-gated by users/{uid}/role.</div>
-                        <div class="feat feat-extra"><i class="fas fa-check"></i>Persistent cart & live home dashboard — Gson-serialized cart in SharedPreferences survives app kill; home shows points progress, an auto-rotating promo carousel, and the latest preparing order.</div>
-                        <div class="feat feat-extra"><i class="fas fa-check"></i>Store info with deep links — One-tap launch into Google Maps Navigation and the system dialer.</div>
-
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>In-app ratings — "Rate Us" dialog (1–5 stars + optional comment) checks Firebase before showing so each user can only rate once; a dedicated ratings screen shows the average, per-star breakdown with progress bars, and a sorted review list.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Categorized menu with size picker — Six emoji-tagged categories with a synced sticky sidebar, multi-size pricing (Grande / Venti / Hot), sold-out overlays, and featured-item badges.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Admin scanner — Single ZXing scanner routes ORDER:, REDEEM:, and VOUCHER: codes; confirmed orders write to per-user history and a global allOrders log with timestamps.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Admin tooling — Menu and redeemable item CRUD, searchable customer directory, manual point adjustments, and store-wide order history — all role-gated by users/{uid}/role.</div>
+                        <div class="feat feat-extra"><i class="fas fa-check"></i>Persistent cart & live home — Gson-serialized cart in SharedPreferences survives app kill; home shows points mini-card, quick order/redeem shortcuts, and an auto-rotating promo banner.</div>
                         <button class="show-more-btn" onclick="toggleProjectFeats(this)">
                             <span class="show-more-label">Show more</span>
                             <i class="fas fa-chevron-down"></i>
@@ -552,7 +876,8 @@
                         <span>Java</span><span>Android Studio</span><span>Firebase Auth</span><span>Firebase RTDB</span><span>Firebase Transactions</span><span>ZXing</span><span>Glide</span><span>Material Design</span>
                     </div>
                 </div>
-            </div>
+                    </div>
+                </div>
 
         </div>
     </section>
@@ -565,7 +890,6 @@
                 <span>Technical Skills</span>
             </div>
             <h2 class="section-title">Expertise &amp;<br><em>Technologies</em></h2>
-
             <div class="skills-grid">
                 <div class="skill-cat reveal">
                     <div class="sc-header">
@@ -580,7 +904,6 @@
                         <div class="sb-item"><span>API Integration</span><div class="sb-track"><div class="sb-fill" style="width:90%"></div></div><em>90%</em></div>
                     </div>
                 </div>
-
                 <div class="skill-cat reveal">
                     <div class="sc-header">
                         <div class="sc-icon"><i class="fas fa-database"></i></div>
@@ -594,7 +917,6 @@
                         <div class="sb-item"><span>REST APIs</span><div class="sb-track"><div class="sb-fill" style="width:90%"></div></div><em>90%</em></div>
                     </div>
                 </div>
-
                 <div class="skill-cat reveal">
                     <div class="sc-header">
                         <div class="sc-icon"><i class="fas fa-tools"></i></div>
@@ -623,15 +945,15 @@
                     </div>
                     <h2 class="section-title light">Let's Build<br><em>Something Great.</em></h2>
                     <p class="contact-sub">
-                        Available for Android development roles, freelance projects, 
+                        Available for Android development roles, freelance projects,
                         or technical consulting. Let's talk about what we can create together.
                     </p>
                     <div class="contact-channels">
-                        <a href="/cdn-cgi/l/email-protection#08696c7a61696664697f7a6d666b6d266f7d646971486f65696164266b6765" class="channel">
+                        <a href="mailto:adrianlawrence.gulay@gmail.com" class="channel">
                             <div class="ch-icon"><i class="fas fa-envelope"></i></div>
                             <div class="ch-info">
                                 <strong>Email</strong>
-                                <span><span class="__cf_email__" data-cfemail="f79693859e96999b96808592999492d990829b968eb7909a969e9bd994989a">[email&#160;protected]</span></span>
+                                <span>adrianlawrence.gulay@gmail.com</span>
                             </div>
                             <i class="fas fa-arrow-right ch-arrow"></i>
                         </a>
@@ -685,7 +1007,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Adrian Lawrence Gulay · Built with precision &amp; passion</p>
+                <p>&copy; 2026 Adrian Lawrence Gulay · Built with precision &amp; passion</p>
             </div>
         </div>
     </footer>
